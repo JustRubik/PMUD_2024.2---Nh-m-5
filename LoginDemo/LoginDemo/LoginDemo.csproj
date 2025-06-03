@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Images\logo_dai_hoc_bkhn.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Bach-Khoa-4639-1585895363-8843-1635744431.png" />
+    <None Remove="Images\background_man_hinh_chinh.jpg" />
+    <None Remove="Images\background_man_hinh_dang_nhap.jpg" />
+    <None Remove="Images\dither_it_background_man_hinh_chinh.jpg" />
+    <None Remove="Images\icon-lock.png" />
+    <None Remove="Images\icon-user.png" />
+    <None Remove="Images\logo_dai_hoc_bkhn.ico" />
+    <None Remove="Images\logo_dai_hoc_bkhn.PNG" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\background_man_hinh_chinh.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\background_man_hinh_dang_nhap.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\dither_it_background_man_hinh_chinh.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\icon-lock.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\icon-user.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\logo_dai_hoc_bkhn.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\logo_dai_hoc_bkhn.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.2" />
+  </ItemGroup>
+
+</Project>

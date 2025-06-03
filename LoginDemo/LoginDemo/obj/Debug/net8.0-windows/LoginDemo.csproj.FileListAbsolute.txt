@@ -1,0 +1,123 @@
+D:\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\LoginDemo.exe
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\ForgotPasswordWindow.baml
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginWindow.baml
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\MainWindow.baml
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\ForgotPasswordWindow.g.cs
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginWindow.g.cs
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\App.g.cs
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo_Content.g.cs
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo_MarkupCompile.cache
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo.g.resources
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo.GeneratedMSBuildEditorConfig.editorconfig
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo.AssemblyInfoInputs.cache
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo.AssemblyInfo.cs
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo.csproj.CoreCompileInputs.cache
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo.dll
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\refint\LoginDemo.dll
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo.pdb
+D:\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Images\background_man_hinh_chinh.jpg
+D:\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Images\background_man_hinh_dang_nhap.jpg
+D:\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Images\dither_it_background_man_hinh_chinh.jpg
+D:\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Images\icon-lock.png
+D:\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Images\icon-user.png
+D:\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Images\logo_dai_hoc_bkhn.PNG
+D:\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\LoginDemo.deps.json
+D:\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\LoginDemo.runtimeconfig.json
+D:\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\LoginDemo.dll
+D:\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\LoginDemo.pdb
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo.genruntimeconfig.cache
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\ref\LoginDemo.dll
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\XuLyGPA.baml
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\XuLyGPA.g.cs
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\XuLyCPA.g.cs
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo_MarkupCompile.lref
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\XuLyCPA.baml
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\CapNhatDiem.g.cs
+D:\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\CapNhatDiem.baml
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\LoginDemo.exe
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Images\background_man_hinh_chinh.jpg
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Images\background_man_hinh_dang_nhap.jpg
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Images\dither_it_background_man_hinh_chinh.jpg
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Images\icon-lock.png
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Images\icon-user.png
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Images\logo_dai_hoc_bkhn.PNG
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\LoginDemo.deps.json
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\LoginDemo.runtimeconfig.json
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\LoginDemo.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\LoginDemo.pdb
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\ForgotPasswordWindow.baml
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginWindow.baml
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\MainWindow.baml
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\XuLyGPA.baml
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\CapNhatDiem.g.cs
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\ForgotPasswordWindow.g.cs
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginWindow.g.cs
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\MainWindow.g.cs
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\XuLyCPA.g.cs
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\XuLyGPA.g.cs
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\App.g.cs
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo_Content.g.cs
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo_MarkupCompile.cache
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo_MarkupCompile.lref
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\CapNhatDiem.baml
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\XuLyCPA.baml
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo.g.resources
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo.GeneratedMSBuildEditorConfig.editorconfig
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo.AssemblyInfoInputs.cache
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo.AssemblyInfo.cs
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo.csproj.CoreCompileInputs.cache
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\refint\LoginDemo.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo.pdb
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo.genruntimeconfig.cache
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\ref\LoginDemo.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Images\logo_dai_hoc_bkhn.ico
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Azure.Core.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Azure.Identity.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Microsoft.Bcl.Cryptography.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Microsoft.Data.SqlClient.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Microsoft.Identity.Client.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\System.ClientModel.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\System.Memory.Data.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\cs\Microsoft.Data.SqlClient.resources.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\de\Microsoft.Data.SqlClient.resources.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\es\Microsoft.Data.SqlClient.resources.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\fr\Microsoft.Data.SqlClient.resources.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\it\Microsoft.Data.SqlClient.resources.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\ja\Microsoft.Data.SqlClient.resources.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\ko\Microsoft.Data.SqlClient.resources.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\pl\Microsoft.Data.SqlClient.resources.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\ru\Microsoft.Data.SqlClient.resources.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\tr\Microsoft.Data.SqlClient.resources.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\Microsoft.Data.SqlClient.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo.csproj.AssemblyReference.cache
+E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo.csproj.Up2Date

@@ -1,0 +1,7 @@
+31/5/2025:
+-Liên kết các window( màn hình chính -> màn hình đăng nhập -> màn hình quên mật khẩu). 
+-Tạo window quên mật khẩu.
+-Tạo placeholder cho các cn demo ngày 4/6.
+
+1/6:
+-Tạo user control cho cập nhật điểm.
