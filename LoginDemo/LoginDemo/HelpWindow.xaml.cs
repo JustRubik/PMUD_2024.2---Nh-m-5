@@ -17,11 +17,13 @@ namespace LoginDemo
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class HelpWindow : Window
+    public partial class HelpWindow : UserControl
     {
         public HelpWindow()
         {
             InitializeComponent();
         }
+
+
     }
 }

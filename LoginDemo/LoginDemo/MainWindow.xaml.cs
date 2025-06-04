@@ -40,13 +40,19 @@ namespace LoginDemo
 
         private void HandleFinalGrade_Click(object sender, RoutedEventArgs e)
         {
-           
+            //MainContentControl.Content = new XuLyDiemCK();
         }
 
         private void UpdateScoreMenuItem_Click(object sender, RoutedEventArgs e)
         {
             MainContentControl.Content = new CapNhatDiem();
         }
+
+        private void Help_Click(object sender, RoutedEventArgs e)
+        {
+            MainContentControl.Content = new HelpWindow();
+        }
+
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
         {
             base.OnClosing(e);

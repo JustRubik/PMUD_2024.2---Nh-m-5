@@ -1,22 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\T\u00E0i li\u1EC7u h\u1ECDc t\u1EADp\\2024-2\\K\u0129 thu\u1EADt ph\u1EA7n m\u1EC1m \u1EE9ng d\u1EE5ng\\Demo\\LoginDemo\\",
+  "WorkspaceRootPath": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|e:\\t\u00E0i li\u1EC7u h\u1ECDc t\u1EADp\\2024-2\\k\u0129 thu\u1EADt ph\u1EA7n m\u1EC1m \u1EE9ng d\u1EE5ng\\demo\\logindemo\\logindemo\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|solutionrelative:logindemo\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|e:\\t\u00E0i li\u1EC7u h\u1ECDc t\u1EADp\\2024-2\\k\u0129 thu\u1EADt ph\u1EA7n m\u1EC1m \u1EE9ng d\u1EE5ng\\demo\\logindemo\\logindemo\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|solutionrelative:logindemo\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|e:\\t\u00E0i li\u1EC7u h\u1ECDc t\u1EADp\\2024-2\\k\u0129 thu\u1EADt ph\u1EA7n m\u1EC1m \u1EE9ng d\u1EE5ng\\demo\\logindemo\\logindemo\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|d:\\github\\pmud_2024.2\\logindemo\\logindemo\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|solutionrelative:logindemo\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|e:\\t\u00E0i li\u1EC7u h\u1ECDc t\u1EADp\\2024-2\\k\u0129 thu\u1EADt ph\u1EA7n m\u1EC1m \u1EE9ng d\u1EE5ng\\demo\\logindemo\\logindemo\\forgotpasswordwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|solutionrelative:logindemo\\forgotpasswordwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|d:\\github\\pmud_2024.2\\logindemo\\logindemo\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|solutionrelative:logindemo\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,54 +18,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ForgotPasswordWindow.xaml.cs",
-              "DocumentMoniker": "E:\\T\u00E0i li\u1EC7u h\u1ECDc t\u1EADp\\2024-2\\K\u0129 thu\u1EADt ph\u1EA7n m\u1EC1m \u1EE9ng d\u1EE5ng\\Demo\\LoginDemo\\LoginDemo\\ForgotPasswordWindow.xaml.cs",
-              "RelativeDocumentMoniker": "LoginDemo\\ForgotPasswordWindow.xaml.cs",
-              "ToolTip": "E:\\T\u00E0i li\u1EC7u h\u1ECDc t\u1EADp\\2024-2\\K\u0129 thu\u1EADt ph\u1EA7n m\u1EC1m \u1EE9ng d\u1EE5ng\\Demo\\LoginDemo\\LoginDemo\\ForgotPasswordWindow.xaml.cs",
-              "RelativeToolTip": "LoginDemo\\ForgotPasswordWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T12:01:26.912Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "LoginWindow.xaml.cs",
-              "DocumentMoniker": "E:\\T\u00E0i li\u1EC7u h\u1ECDc t\u1EADp\\2024-2\\K\u0129 thu\u1EADt ph\u1EA7n m\u1EC1m \u1EE9ng d\u1EE5ng\\Demo\\LoginDemo\\LoginDemo\\LoginWindow.xaml.cs",
+              "DocumentMoniker": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\LoginWindow.xaml.cs",
               "RelativeDocumentMoniker": "LoginDemo\\LoginWindow.xaml.cs",
-              "ToolTip": "E:\\T\u00E0i li\u1EC7u h\u1ECDc t\u1EADp\\2024-2\\K\u0129 thu\u1EADt ph\u1EA7n m\u1EC1m \u1EE9ng d\u1EE5ng\\Demo\\LoginDemo\\LoginDemo\\LoginWindow.xaml.cs",
-              "RelativeToolTip": "LoginDemo\\LoginWindow.xaml.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAIwFUAAAAiAAAAAAAAAA==",
+              "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\LoginWindow.xaml.cs*",
+              "RelativeToolTip": "LoginDemo\\LoginWindow.xaml.cs*",
+              "ViewState": "AgIAAC8AAABAAAAAAAAwwBAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:51:45.542Z"
+              "WhenOpened": "2025-06-04T03:57:47.686Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "LoginWindow.xaml",
-              "DocumentMoniker": "E:\\T\u00E0i li\u1EC7u h\u1ECDc t\u1EADp\\2024-2\\K\u0129 thu\u1EADt ph\u1EA7n m\u1EC1m \u1EE9ng d\u1EE5ng\\Demo\\LoginDemo\\LoginDemo\\LoginWindow.xaml",
+              "DocumentMoniker": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\LoginWindow.xaml",
               "RelativeDocumentMoniker": "LoginDemo\\LoginWindow.xaml",
-              "ToolTip": "E:\\T\u00E0i li\u1EC7u h\u1ECDc t\u1EADp\\2024-2\\K\u0129 thu\u1EADt ph\u1EA7n m\u1EC1m \u1EE9ng d\u1EE5ng\\Demo\\LoginDemo\\LoginDemo\\LoginWindow.xaml",
+              "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\LoginWindow.xaml",
               "RelativeToolTip": "LoginDemo\\LoginWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-03T11:38:01.64Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "E:\\T\u00E0i li\u1EC7u h\u1ECDc t\u1EADp\\2024-2\\K\u0129 thu\u1EADt ph\u1EA7n m\u1EC1m \u1EE9ng d\u1EE5ng\\Demo\\LoginDemo\\LoginDemo\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "LoginDemo\\MainWindow.xaml",
-              "ToolTip": "E:\\T\u00E0i li\u1EC7u h\u1ECDc t\u1EADp\\2024-2\\K\u0129 thu\u1EADt ph\u1EA7n m\u1EC1m \u1EE9ng d\u1EE5ng\\Demo\\LoginDemo\\LoginDemo\\MainWindow.xaml",
-              "RelativeToolTip": "LoginDemo\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-03T11:35:48.847Z",
+              "WhenOpened": "2025-06-04T03:57:44.264Z",
               "EditorCaption": ""
             }
           ]

@@ -145,7 +145,7 @@
                 <MenuItem Header="Thống kê kết quả học tập" Style="{StaticResource SubMenuItemStyle}"/>
             </MenuItem>
 
-            <MenuItem Margin="0,0,20,0">
+            <MenuItem Margin="0,0,20,0" Click ="Help_Click">
                 <MenuItem.Header>
                     <TextBlock Text="TRỢ GIÚP" Style="{StaticResource MainMenuHeaderTextBlock}"/>
                 </MenuItem.Header>

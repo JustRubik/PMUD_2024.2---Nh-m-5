@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Tài liệu học tập\\2024-2\\Kĩ thuật phần mềm ứng dụng\\Demo\\LoginDemo\\LoginDemo\\LoginDemo.csproj": {}
+    "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\LoginDemo.csproj": {}
   },
   "projects": {
-    "E:\\Tài liệu học tập\\2024-2\\Kĩ thuật phần mềm ứng dụng\\Demo\\LoginDemo\\LoginDemo\\LoginDemo.csproj": {
+    "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\LoginDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Tài liệu học tập\\2024-2\\Kĩ thuật phần mềm ứng dụng\\Demo\\LoginDemo\\LoginDemo\\LoginDemo.csproj",
+        "projectUniqueName": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\LoginDemo.csproj",
         "projectName": "LoginDemo",
-        "projectPath": "E:\\Tài liệu học tập\\2024-2\\Kĩ thuật phần mềm ứng dụng\\Demo\\LoginDemo\\LoginDemo\\LoginDemo.csproj",
+        "projectPath": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\LoginDemo.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "E:\\Tài liệu học tập\\2024-2\\Kĩ thuật phần mềm ứng dụng\\Demo\\LoginDemo\\LoginDemo\\obj\\",
+        "outputPath": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Coding\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

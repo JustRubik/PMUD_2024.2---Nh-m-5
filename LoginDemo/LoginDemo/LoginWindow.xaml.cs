@@ -14,7 +14,7 @@ namespace LoginDemo
         {
             string connectionString = "Server=admin-pc\\sqlexpress;Database=QuanLyDiemSVBK;Trusted_Connection=True;TrustServerCertificate=True;";
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new (connectionString))
             {
                 conn.Open();
 

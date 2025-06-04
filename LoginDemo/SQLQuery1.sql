@@ -1,18 +1,18 @@
-﻿/*CREATE DATABASE QuanLyDiemSVBK
+﻿CREATE DATABASE QuanLyDiemSVBK
 ON
 (	NAME = 'qldsvbk_datasinhvien',
-	FILENAME = 'E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\qldsvbk_datasinhvien.mdf',
+	FILENAME = 'D:\GITHUB\PMUD_2024.2\LoginDemo\qldsvbk_datasinhvien.mdf',
 	SIZE =100MB,
 	MAXSIZE = 1000MB,
 	FILEGROWTH = 50MB)
 LOG ON
 (	
 NAME = 'qldsvbk_log',
-	FILENAME = 'E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\qldsvbk_datasinhvien.ldf',
+	FILENAME = 'D:\GITHUB\PMUD_2024.2\LoginDemo\qldsvbk_datasinhvien.ldf',
 	SIZE =100MB,
 	MAXSIZE = 1000MB,
 	FILEGROWTH = 50MB)
-GO*/
+GO
 USE QuanLyDiemSVBK;
 GO
 

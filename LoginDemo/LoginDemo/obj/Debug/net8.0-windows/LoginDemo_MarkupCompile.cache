@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\
+D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\
 LoginDemo
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-E:\Tài liệu học tập\2024-2\Kĩ thuật phần mềm ứng dụng\Demo\LoginDemo\LoginDemo\App.xaml
-6-1792160611
+D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\App.xaml
+7-1425103298
 7-1291343633
-9-885706188
+101288437144
 215108528590
-CapNhatDiem.xaml;ForgotPasswordWindow.xaml;LoginWindow.xaml;MainWindow.xaml;XuLyCPA.xaml;XuLyGPA.xaml;
+CapNhatDiem.xaml;ForgotPasswordWindow.xaml;HelpWindow.xaml;LoginWindow.xaml;MainWindow.xaml;XuLyCPA.xaml;XuLyGPA.xaml;
 
 False
 
