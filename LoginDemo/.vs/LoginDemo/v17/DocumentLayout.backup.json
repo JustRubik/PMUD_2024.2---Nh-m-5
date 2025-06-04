@@ -26,9 +26,9 @@
               "Title": "LoginWindow.xaml.cs",
               "DocumentMoniker": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\LoginWindow.xaml.cs",
               "RelativeDocumentMoniker": "LoginDemo\\LoginWindow.xaml.cs",
-              "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\LoginWindow.xaml.cs*",
-              "RelativeToolTip": "LoginDemo\\LoginWindow.xaml.cs*",
-              "ViewState": "AgIAAC8AAABAAAAAAAAwwBAAAAAsAAAAAAAAAA==",
+              "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\LoginWindow.xaml.cs",
+              "RelativeToolTip": "LoginDemo\\LoginWindow.xaml.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABgAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-04T03:57:47.686Z",
               "EditorCaption": ""
@@ -42,8 +42,7 @@
               "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\LoginWindow.xaml",
               "RelativeToolTip": "LoginDemo\\LoginWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-04T03:57:44.264Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T03:57:44.264Z"
             }
           ]
         }

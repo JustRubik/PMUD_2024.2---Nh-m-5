@@ -18,11 +18,11 @@ namespace LoginDemo
             {
                 conn.Open();
 
-                string query = $"SELECT password FROM {tableName} WHERE username = @username";
+                string query = $"SELECT Password FROM {tableName} WHERE Username = @username";
 
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+                using (SqlCommand cmd = new(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@Username", username);
                     object result = cmd.ExecuteScalar();
 
                     return (result != null && result.ToString() == password);
@@ -52,7 +52,7 @@ namespace LoginDemo
                 }
                 else if (StudentRadio.IsChecked == true)
                 {
-                    if (CheckLogin(username, password, "Student"))
+                    if (CheckLogin(username, password, "taikhoan_sinhvien"))
                     {
                         MessageBox.Show("Đăng nhập thành công!");
                         DialogResult = true;
@@ -65,7 +65,7 @@ namespace LoginDemo
                 }
                 else if (TeacherRadio.IsChecked == true)
                 {
-                    if (CheckLogin(username, password, "Teacher"))
+                    if (CheckLogin(username, password, "taikhoan_giangvien"))
                     {
                         MessageBox.Show("Đăng nhập thành công!");
                         DialogResult = true;

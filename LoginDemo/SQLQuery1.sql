@@ -1,4 +1,15 @@
-﻿CREATE DATABASE QuanLyDiemSVBK
+﻿/*USE QuanLyDiemSVBK;
+GO
+
+DECLARE @sql NVARCHAR(MAX) = N'';
+
+SELECT @sql += 'DROP TABLE [' + SCHEMA_NAME(schema_id) + '].[' + name + '];'
+FROM sys.tables;
+
+EXEC sp_executesql @sql;
+*/
+
+CREATE DATABASE QuanLyDiemSVBK
 ON
 (	NAME = 'qldsvbk_datasinhvien',
 	FILENAME = 'D:\GITHUB\PMUD_2024.2\LoginDemo\qldsvbk_datasinhvien.mdf',
@@ -13,8 +24,14 @@ NAME = 'qldsvbk_log',
 	MAXSIZE = 1000MB,
 	FILEGROWTH = 50MB)
 GO
+
 USE QuanLyDiemSVBK;
 GO
+
+CREATE TABLE [Admin](
+	Username Varchar(50) primary key,
+	Password Varchar(25) NULL
+);
 
 CREATE TABLE [vien](
 	[MaVien] [nvarchar](25) NOT NULL,
@@ -70,8 +87,8 @@ CREATE TABLE [giangvien](
 GO 
 CREATE TABLE [taikhoan_sinhvien] (
     MaSV INT NOT NULL,
-    TaiKhoan NVARCHAR(50) NULL,
-    MatKhau NVARCHAR(50) NULL,
+    Username NVARCHAR(50) NULL,
+    Password NVARCHAR(50) NULL,
     CONSTRAINT PK_taikhoan_sinhvien PRIMARY KEY (MaSV),
     CONSTRAINT FK_taikhoan_sinhvien_MaSV FOREIGN KEY (MaSV)
         REFERENCES sinhvien(MaSV)
@@ -80,8 +97,8 @@ CREATE TABLE [taikhoan_sinhvien] (
 GO
 CREATE TABLE [taikhoan_giangvien] (
     MaGV INT NOT NULL,
-    TaiKhoan NVARCHAR(50) NULL,
-    MatKhau NVARCHAR(50) NULL,
+    Username NVARCHAR(50) NULL,
+    Password NVARCHAR(50) NULL,
     CONSTRAINT PK_taikhoan_giangvien PRIMARY KEY (MaGV),
     CONSTRAINT FK_taikhoan_giangvien_MaGV FOREIGN KEY (MaGV)
         REFERENCES giangvien(MaGV)
@@ -192,7 +209,10 @@ ADD CONSTRAINT FK_capgiayto_sinhvien
 FOREIGN KEY (MaSV) REFERENCES sinhvien(MaSV);
 
 
-DELETE FROM [sinhvien];
+--DELETE FROM [sinhvien];
+
+INSERT INTO [dbo].[Admin] VALUES ('admin1','1234'),('admin2','5678');
+GO
 
 INSERT INTO [dbo].[vien] VALUES 
 (N'FAMI', N'Nguyen Thị Hồng Thúy', N'Viện Toán ứng dụng và Tin học', N'sami.hust.edu.vn', N'D3 - 106'),
