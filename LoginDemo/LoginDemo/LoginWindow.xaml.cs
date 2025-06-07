@@ -10,11 +10,18 @@ namespace LoginDemo
             InitializeComponent();
         }
 
-        private bool CheckLogin(string username, string password, string tableName)
+        private void OpenAfterLogin(string username)
+        {
+            var afterLogin = new AfterLogin(username);
+            afterLogin.Show();
+            this.Close();
+        }
+
+        private static bool CheckLogin(string username, string password, string tableName)
         {
             string connectionString = "Server=admin-pc\\sqlexpress;Database=QuanLyDiemSVBK;Trusted_Connection=True;TrustServerCertificate=True;";
 
-            using (SqlConnection conn = new (connectionString))
+            using (SqlConnection conn = new(connectionString))
             {
                 conn.Open();
 
@@ -25,7 +32,7 @@ namespace LoginDemo
                     cmd.Parameters.AddWithValue("@Username", username);
                     object result = cmd.ExecuteScalar();
 
-                    return (result != null && result.ToString() == password);
+                    return result is string storedPassword && storedPassword == password;
                 }
             }
         }
@@ -37,55 +44,34 @@ namespace LoginDemo
 
             try
             {
-                if (AdminRadio.IsChecked == true)
-                {
-                    if (CheckLogin(username, password, "Admin"))
-                    {
-                        MessageBox.Show("Đăng nhập thành công!");
-                        DialogResult = true;
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Sai tài khoản hoặc mật khẩu.");
-                    }
-                }
-                else if (StudentRadio.IsChecked == true)
-                {
-                    if (CheckLogin(username, password, "taikhoan_sinhvien"))
-                    {
-                        MessageBox.Show("Đăng nhập thành công!");
-                        DialogResult = true;
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Sai tài khoản hoặc mật khẩu.");
-                    }
-                }
-                else if (TeacherRadio.IsChecked == true)
-                {
-                    if (CheckLogin(username, password, "taikhoan_giangvien"))
-                    {
-                        MessageBox.Show("Đăng nhập thành công!");
-                        DialogResult = true;
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Sai tài khoản hoặc mật khẩu.");
-                    }
-                }
+                string? tableName = null;
+
+                if (AdminRadio.IsChecked == true) tableName = "Admin";
+                else if (StudentRadio.IsChecked == true) tableName = "taikhoan_sinhvien";
+                else if (TeacherRadio.IsChecked == true) tableName = "taikhoan_giangvien";
                 else
                 {
                     MessageBox.Show("Vui lòng chọn loại tài khoản.");
+                    return;
                 }
+
+                if (CheckLogin(username, password, tableName))
+                {
+                    MessageBox.Show("Đăng nhập thành công!");
+                    OpenAfterLogin(username);
+                }
+                else
+                {
+                    MessageBox.Show("Sai tài khoản hoặc mật khẩu.");
+                }
+
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show($":\n{ex.Message}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
+
         }
 
 
@@ -97,7 +83,5 @@ namespace LoginDemo
         {
             base.OnClosing(e);
         }
-
-
     }
 }

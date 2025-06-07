@@ -8,6 +8,9 @@
     <Compile Update="HelpWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="AfterLogin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="XuLyCPA.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

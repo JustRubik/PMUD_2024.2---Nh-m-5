@@ -210,3 +210,6 @@ D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\refint\LoginD
 D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo.pdb
 D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\LoginDemo.genruntimeconfig.cache
 D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\ref\LoginDemo.dll
+D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\AfterLogin.baml
+D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\AfterLogin.g.cs
+D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\App.baml

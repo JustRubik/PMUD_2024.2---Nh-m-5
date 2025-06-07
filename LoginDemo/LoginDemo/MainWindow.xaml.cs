@@ -11,8 +11,10 @@ namespace LoginDemo
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            LoginWindow loginWindow = new LoginWindow();
-            loginWindow.Owner = this;
+            LoginWindow loginWindow = new()
+            {
+                Owner = this
+            };
             this.Hide();
 
             bool? result = loginWindow.ShowDialog();
