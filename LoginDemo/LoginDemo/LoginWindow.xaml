@@ -5,7 +5,7 @@
     xmlns:av="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="av"
-    Title="LoginDemo"
+    Title="Đăng nhập"
     WindowStartupLocation="CenterScreen"
     WindowStyle="SingleBorderWindow"
     WindowState="Maximized"
@@ -85,7 +85,7 @@
                     <Button x:Name="LoginButton" Content="ĐĂNG NHẬP" Height="40"
                             FontWeight="Bold" Background="#9CABF5" Foreground="White"
                             BorderThickness="0" Margin="0,20,0,0"
-                            Click="LoginButton_Click" Cursor="Hand">
+                            Click="LoginButton_Click" Cursor="Hand" IsDefault="True">
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
                                 <Border x:Name="border"

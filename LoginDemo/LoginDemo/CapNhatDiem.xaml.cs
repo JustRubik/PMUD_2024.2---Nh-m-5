@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Data.SqlClient;
 
 namespace LoginDemo
 {
@@ -24,5 +25,16 @@ namespace LoginDemo
         {
             InitializeComponent();
         }
+
+        public class DiemModel
+        {
+            public required string MSSV { get; set; }
+            public required string MaHocPhan { get; set; }
+            public int DiemGK { get; set; }
+            public double KiHoc { get; set; }
+            public double MaLopHocPhan { get; set; }
+            public double DiemCK { get; set; }
+        }
+
     }
 }

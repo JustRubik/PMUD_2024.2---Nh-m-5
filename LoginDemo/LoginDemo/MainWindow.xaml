@@ -13,65 +13,47 @@
         WindowState="Maximized">
 
     <DockPanel>
-
+        
+        <!--HEADER màu đỏ-->
         <StackPanel Background="#e62c2c" DockPanel.Dock="Top" Orientation="Horizontal" Height="118">
             <Image Source="Images/logo_dai_hoc_bkhn.png"
 
                    Height="99" Margin="15,5,10,5" VerticalAlignment="Center"/>
 
+            <!--Tiêu đề-->
             <StackPanel VerticalAlignment="Center" Margin="20,0">
                 <TextBlock Text="ĐẠI HỌC BÁCH KHOA HÀ NỘI" FontSize="26" Foreground="White" FontWeight="Bold"/>
                 <TextBlock Text="HỆ THỐNG QUẢN LÝ SINH VIÊN" FontSize="19" Foreground="White"/>
             </StackPanel>
 
-            <Button x:Name="LoginButton"
-
-					Click="LoginButton_Click"
-
-				    Content="ĐĂNG NHẬP"
-
-                    Width="200" Height="40"
-
+            <!-- Nút ba chấm thay cho ĐĂNG NHẬP -->
+            <Button x:Name="MenuButton"
+                    Width="60" Height="40"
                     FontWeight="Bold"
-
-                    Background="#9CABF5"
-
+                    FontSize="24"
+                    Background="Transparent"
                     Foreground="White"
-
                     BorderThickness="0"
-
                     Margin="500,0,20,0"
-
                     VerticalAlignment="Center"
-
                     HorizontalAlignment="Right"
-
-                    Cursor="Hand"
-
-                    FontSize="19">
+                    Cursor="Hand">
+                <Image Source="/Images/icon-user.png" Stretch="Fill"/>
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="border"
-
-                                Background="{TemplateBinding Background}"
-
-                                CornerRadius="20"
-
-                                BorderBrush="{TemplateBinding BorderBrush}"
-
-                                BorderThickness="{TemplateBinding BorderThickness}">
+                    Background="{TemplateBinding Background}"
+                    CornerRadius="20"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="border" Property="Background" Value="#7A93F7"/>
+                                <Setter TargetName="border" Property="Background" Value="#F05555"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="True">
-                                <Setter TargetName="border" Property="Background" Value="#5A75E6"/>
-                            </Trigger>
-                            <Trigger Property="IsEnabled" Value="False">
-                                <Setter TargetName="border" Property="Background" Value="#CCC"/>
-                                <Setter Property="Foreground" Value="Gray"/>
+                                <Setter TargetName="border" Property="Background" Value="#C03333"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -79,6 +61,7 @@
             </Button>
         </StackPanel>
 
+        <!--Menu-->
         <Menu DockPanel.Dock="Top" Background="Black" Height="34">
             <Menu.Resources>
                 <Style x:Key="MainMenuHeaderTextBlock" TargetType="TextBlock">
@@ -117,10 +100,12 @@
                 <MenuItem.Header>
                     <TextBlock Text="DANH MỤC" Style="{StaticResource MainMenuHeaderTextBlock}"/>
                 </MenuItem.Header>
-                <MenuItem Header="Thông tin tài khoản" Style="{StaticResource SubMenuItemStyle}"/>
-                <MenuItem Header="Đổi mật khẩu" Style="{StaticResource SubMenuItemStyle}"/>
-                <MenuItem Header="Ngành học" Style="{StaticResource SubMenuItemStyle}"/>
-                <MenuItem Header="Chương trình đào tạo" Style="{StaticResource SubMenuItemStyle}"/>
+                <MenuItem Header="Danh mục giảng viên" Style="{StaticResource SubMenuItemStyle}" Click="DanhMucGiangVien_Click"/>
+                <MenuItem Header="Danh mục sinh viên" Style="{StaticResource SubMenuItemStyle}" Click="DanhMucSinhVien_Click"/>
+                <MenuItem Header="Danh mục học phần" Style="{StaticResource SubMenuItemStyle}"  Click="DanhMucHocPhan_Click"/>
+                <MenuItem Header="Danh mục khoa viện" Style="{StaticResource SubMenuItemStyle}" Click="DanhMucKhoaVien_Click"/>
+                <MenuItem Header="Danh mục lớp học phần" Style="{StaticResource SubMenuItemStyle}" Click="DanhMucLopHocPhan_Click"/>
+                <MenuItem Header="Danh mục ngành đào tạo" Style="{StaticResource SubMenuItemStyle}" Click="DanhMucNganhDaoTao_Click"/>
             </MenuItem>
 
             <MenuItem Margin="0,0,20,0">
@@ -145,6 +130,14 @@
                 <MenuItem Header="Thống kê kết quả học tập" Style="{StaticResource SubMenuItemStyle}"/>
             </MenuItem>
 
+            <MenuItem Margin="0,0,20,0">
+                <MenuItem.Header>
+                    <TextBlock Text="HỆ THỐNG" Style="{StaticResource MainMenuHeaderTextBlock}"/>
+                </MenuItem.Header>
+                <MenuItem Header="Thông tin tài khoản" Style="{StaticResource SubMenuItemStyle}"/>
+                <MenuItem Header="Đổi mật khẩu" Style="{StaticResource SubMenuItemStyle}"/>
+            </MenuItem>
+            
             <MenuItem Margin="0,0,20,0" Click ="Help_Click">
                 <MenuItem.Header>
                     <TextBlock Text="TRỢ GIÚP" Style="{StaticResource MainMenuHeaderTextBlock}"/>
@@ -152,6 +145,7 @@
             </MenuItem>
         </Menu>
 
+        <!-- Vùng maincontent-->
         <Grid x:Name="MainContentArea">
             <Image Source="Images/dither_it_background_man_hinh_chinh.jpg"
 

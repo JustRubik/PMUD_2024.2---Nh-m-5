@@ -20,7 +20,6 @@
 
             <!-- Nút ba chấm thay cho ĐĂNG NHẬP -->
             <Button x:Name="MenuButton"
-                    Content="⋯"
                     Width="60" Height="40"
                     FontWeight="Bold"
                     FontSize="24"
@@ -31,6 +30,7 @@
                     VerticalAlignment="Center"
                     HorizontalAlignment="Right"
                     Cursor="Hand">
+                <Image Source="/Images/icon-user.png" Stretch="Fill"/>
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="border"

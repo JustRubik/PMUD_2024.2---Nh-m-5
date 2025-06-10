@@ -1,5 +1,6 @@
-﻿using System.Windows;
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
+using System.Text;
+using System.Windows;
 
 namespace LoginDemo
 {
@@ -10,31 +11,28 @@ namespace LoginDemo
             InitializeComponent();
         }
 
-        private void OpenAfterLogin(string username)
+        private void OpenMainWindow(string username)
         {
-            var afterLogin = new AfterLogin(username);
+            var afterLogin = new MainWindow(username);
             afterLogin.Show();
             this.Close();
         }
 
+        //Kiểm tra đăng nhập
         private static bool CheckLogin(string username, string password, string tableName)
         {
             string connectionString = "Server=admin-pc\\sqlexpress;Database=QuanLyDiemSVBK;Trusted_Connection=True;TrustServerCertificate=True;";
 
-            using (SqlConnection conn = new(connectionString))
-            {
-                conn.Open();
+            using SqlConnection conn = new(connectionString);
+            conn.Open();
 
-                string query = $"SELECT Password FROM {tableName} WHERE Username = @username";
+            string query = $"SELECT Password FROM {tableName} WHERE Username = @username";
 
-                using (SqlCommand cmd = new(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@Username", username);
-                    object result = cmd.ExecuteScalar();
+            using SqlCommand cmd = new(query, conn);
+            cmd.Parameters.AddWithValue("@Username", username);
+            object result = cmd.ExecuteScalar();
 
-                    return result is string storedPassword && storedPassword == password;
-                }
-            }
+            return result is string storedPassword && storedPassword == password;
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
@@ -44,21 +42,23 @@ namespace LoginDemo
 
             try
             {
-                string? tableName = null;
 
-                if (AdminRadio.IsChecked == true) tableName = "Admin";
-                else if (StudentRadio.IsChecked == true) tableName = "taikhoan_sinhvien";
-                else if (TeacherRadio.IsChecked == true) tableName = "taikhoan_giangvien";
-                else
+                string? tableName = (AdminRadio.IsChecked == true) ? "Admin"
+                 : (StudentRadio.IsChecked == true) ? "taikhoan_sinhvien"
+                 : (TeacherRadio.IsChecked == true) ? "taikhoan_giangvien"
+                 : null;
+
+                if (tableName == null)
                 {
                     MessageBox.Show("Vui lòng chọn loại tài khoản.");
                     return;
                 }
 
+
                 if (CheckLogin(username, password, tableName))
                 {
                     MessageBox.Show("Đăng nhập thành công!");
-                    OpenAfterLogin(username);
+                    OpenMainWindow(username);
                 }
                 else
                 {

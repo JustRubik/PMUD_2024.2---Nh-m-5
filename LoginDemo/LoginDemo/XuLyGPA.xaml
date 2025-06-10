@@ -13,29 +13,31 @@
             <Grid Grid.Column="0" Margin="10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <!-- Mã sinh viên -->
-                <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,10">
-                    <TextBlock Text="MSSV:" Width="120" VerticalAlignment="Center" FontSize="13"/>
-                    <TextBox x:Name="txtMaSinhVien" Width="200"/>
-                </StackPanel>
+                <!-- Expander bọc toàn bộ input -->
+                <Expander IsExpanded="True" FontSize="13" Grid.Row="0">
+                    <StackPanel>
+                        <!-- Mã sinh viên -->
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="MSSV:" Width="120" VerticalAlignment="Center" FontSize="13"/>
+                            <TextBox x:Name="txtMaSinhVien" Width="200"/>
+                        </StackPanel>
 
-                <!-- Kì học -->
-                <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,10">
-                    <TextBlock Text="Kì học:" Width="120" VerticalAlignment="Center" FontSize="13"/>
-                    <ComboBox x:Name="cboKiHoc" Width="200"/>
-        
-                </StackPanel>
+                        <!-- Kì học -->
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Kì học:" Width="120" VerticalAlignment="Center" FontSize="13"/>
+                            <ComboBox x:Name="cboKiHoc" Width="200"/>
+                        </StackPanel>
 
-                <!-- Nút hiển thị các môn -->
-                <CheckBox Grid.Row="2" Content="Hiển thị các môn trong kì" Width="200" HorizontalAlignment="Left" Margin="120,0,0,10" FontSize="13" VerticalAlignment="Center"/>
+                        <!-- Nút hiển thị các môn -->
+                        <CheckBox Content="Hiển thị các môn trong kì" Width="200" HorizontalAlignment="Left" Margin="120,0,0,10" FontSize="13" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Expander>
 
                 <!-- Kết quả (DataGrid) -->
-                <DataGrid Grid.Row="3" x:Name="dgKetQua" AutoGenerateColumns="False">
+                <DataGrid Grid.Row="1" x:Name="dgKetQua" AutoGenerateColumns="False">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Mã môn học" Binding="{Binding MaMonHoc}" Width="120"/>
                         <DataGridTextColumn Header="Tên môn học" Binding="{Binding TenMonHoc}" Width="*"/>

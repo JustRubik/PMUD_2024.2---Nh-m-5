@@ -4,18 +4,20 @@ namespace LoginDemo
 {
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(string username)
         {
             InitializeComponent();
+            Title = $"Xin chào {username}";
         }
 
+        /*
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             LoginWindow loginWindow = new()
             {
                 Owner = this
             };
-            this.Hide();
+            Hide();
 
             bool? result = loginWindow.ShowDialog();
 
@@ -27,7 +29,7 @@ namespace LoginDemo
             {
                 Close(); // đóng cửa sổ chính nếu đăng nhập không thành công    
             }
-        }
+        }*/
 
         private void HandleGPA_Click(object sender, RoutedEventArgs e)
         {
@@ -53,6 +55,36 @@ namespace LoginDemo
         private void Help_Click(object sender, RoutedEventArgs e)
         {
             MainContentControl.Content = new HelpWindow();
+        }
+
+        private void DanhMucGiangVien_Click(object sender, RoutedEventArgs e)
+        {
+            MainContentControl.Content = new DanhMucGiangVien();
+        }
+
+        private void DanhMucSinhVien_Click(object sender, RoutedEventArgs e)
+        {
+            MainContentControl.Content = new DanhMucSinhVien();
+        }
+
+        private void DanhMucHocPhan_Click(object sender, RoutedEventArgs e)
+        {
+            MainContentControl.Content = new DanhMucHocPhan();
+        }
+
+        private void DanhMucNganhDaoTao_Click(object sender, RoutedEventArgs e)
+        {
+            MainContentControl.Content = new DanhMucNganhDaoTao();
+        }
+
+        private void DanhMucLopHocPhan_Click(object sender, RoutedEventArgs e)
+        {
+            MainContentControl.Content = new DanhMucLopHocPhan();
+        }
+
+        private void DanhMucKhoaVien_Click(object sender, RoutedEventArgs e)
+        {
+            MainContentControl.Content = new DanhMucKhoaVien();
         }
 
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)

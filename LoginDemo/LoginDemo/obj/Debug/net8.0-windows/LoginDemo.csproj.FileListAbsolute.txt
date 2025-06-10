@@ -213,3 +213,15 @@ D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\ref\LoginDemo
 D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\AfterLogin.baml
 D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\AfterLogin.g.cs
 D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\App.baml
+D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\DanhMucGiangVien.baml
+D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\DanhMucHocPhan.baml
+D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\DanhMucKhoaVien.baml
+D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\DanhMucLopHocPhan.baml
+D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\DanhMucNganhDaoTao.baml
+D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\DanhMucSinhVien.baml
+D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\DanhMucGiangVien.g.cs
+D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\DanhMucHocPhan.g.cs
+D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\DanhMucKhoaVien.g.cs
+D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\DanhMucLopHocPhan.g.cs
+D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\DanhMucNganhDaoTao.g.cs
+D:\GITHUB\PMUD_2024.2\LoginDemo\LoginDemo\obj\Debug\net8.0-windows\DanhMucSinhVien.g.cs
