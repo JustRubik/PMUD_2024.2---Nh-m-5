@@ -1,4 +1,9 @@
->>07.06.25
+>>07/06/25
 --
 Thêm phần afterlogin
 Cập nhật lại 1 vài chức năng liên quan đến các file mainwindow, loginwindow và afterlogin
+--
+
+>>1:33AM 11/06/25
+--
+Đã sửa login lên làm trang mặc định, main window sẽ xử lí theo username.
