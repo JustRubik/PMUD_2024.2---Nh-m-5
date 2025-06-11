@@ -9,8 +9,6 @@ namespace LoginDemo
     /// </summary>
     public partial class App : Application
     {
-
-
         protected override void OnExit(ExitEventArgs e)
         {
             // Dọn dẹp tài nguyên hoặc lưu trạng thái ở đây

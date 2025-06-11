@@ -3,42 +3,86 @@
   "WorkspaceRootPath": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|d:\\github\\pmud_2024.2\\logindemo\\logindemo\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|solutionrelative:logindemo\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|d:\\github\\pmud_2024.2\\logindemo\\logindemo\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|solutionrelative:logindemo\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|d:\\github\\pmud_2024.2\\logindemo\\logindemo\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|solutionrelative:logindemo\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|d:\\github\\pmud_2024.2\\logindemo\\logindemo\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|solutionrelative:logindemo\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|d:\\github\\pmud_2024.2\\logindemo\\logindemo\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|solutionrelative:logindemo\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|d:\\github\\pmud_2024.2\\logindemo\\logindemo\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|solutionrelative:logindemo\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|d:\\github\\pmud_2024.2\\logindemo\\logindemo\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|solutionrelative:logindemo\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|d:\\github\\pmud_2024.2\\logindemo\\logindemo\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|LoginDemo\\LoginDemo.csproj|solutionrelative:logindemo\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 100,
+      "VerticalTabListWidth": 183,
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\App.xaml.cs",
+              "RelativeDocumentMoniker": "LoginDemo\\App.xaml.cs",
+              "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\App.xaml.cs",
+              "RelativeToolTip": "LoginDemo\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAABgZmZmZmYWwAoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T06:03:29.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\App.xaml",
+              "RelativeDocumentMoniker": "LoginDemo\\App.xaml",
+              "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\App.xaml",
+              "RelativeToolTip": "LoginDemo\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-11T06:00:35.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "LoginDemo\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\MainWindow.xaml.cs",
+              "RelativeToolTip": "LoginDemo\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAE8AAABAAAAAAAAqwF8AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T18:04:17.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "LoginWindow.xaml",
               "DocumentMoniker": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\LoginWindow.xaml",
               "RelativeDocumentMoniker": "LoginDemo\\LoginWindow.xaml",
               "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\LoginWindow.xaml",
               "RelativeToolTip": "LoginDemo\\LoginWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-07T17:40:44.893Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-07T17:40:44.893Z"
             },
             {
               "$type": "Document",
@@ -48,14 +92,14 @@
               "RelativeDocumentMoniker": "LoginDemo\\LoginWindow.xaml.cs",
               "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\LoginWindow.xaml.cs",
               "RelativeToolTip": "LoginDemo\\LoginWindow.xaml.cs",
-              "ViewState": "AgIAACgAAAAAzczMzMwcwE0AAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-07T03:44:09.393Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\MainWindow.xaml",
               "RelativeDocumentMoniker": "LoginDemo\\MainWindow.xaml",
@@ -63,19 +107,6 @@
               "RelativeToolTip": "LoginDemo\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-06-06T17:11:59.122Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "LoginDemo\\MainWindow.xaml.cs",
-              "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\LoginDemo\\MainWindow.xaml.cs",
-              "RelativeToolTip": "LoginDemo\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T18:04:17.423Z",
               "EditorCaption": ""
             }
           ]

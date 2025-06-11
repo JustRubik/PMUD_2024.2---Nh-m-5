@@ -1,5 +1,4 @@
 ﻿using Microsoft.Data.SqlClient;
-using System.Text;
 using System.Windows;
 
 namespace LoginDemo
@@ -9,27 +8,29 @@ namespace LoginDemo
         public LoginWindow()
         {
             InitializeComponent();
+
         }
 
         private void OpenMainWindow(string username)
         {
-            var afterLogin = new MainWindow(username);
+            var afterLogin = new MainWindow(username, this);
+
+            Application.Current.MainWindow = afterLogin;
+
             afterLogin.Show();
-            this.Close();
+            Hide();
         }
 
-        //Kiểm tra đăng nhập
+        // Kiểm tra đăng nhập
         private static bool CheckLogin(string username, string password, string tableName)
         {
             string connectionString = "Server=admin-pc\\sqlexpress;Database=QuanLyDiemSVBK;Trusted_Connection=True;TrustServerCertificate=True;";
-
             using SqlConnection conn = new(connectionString);
             conn.Open();
 
             string query = $"SELECT Password FROM {tableName} WHERE Username = @username";
-
             using SqlCommand cmd = new(query, conn);
-            cmd.Parameters.AddWithValue("@Username", username);
+            cmd.Parameters.AddWithValue("@username", username);
             object result = cmd.ExecuteScalar();
 
             return result is string storedPassword && storedPassword == password;
@@ -42,18 +43,16 @@ namespace LoginDemo
 
             try
             {
-
                 string? tableName = (AdminRadio.IsChecked == true) ? "Admin"
-                 : (StudentRadio.IsChecked == true) ? "taikhoan_sinhvien"
-                 : (TeacherRadio.IsChecked == true) ? "taikhoan_giangvien"
-                 : null;
+                                 : (StudentRadio.IsChecked == true) ? "taikhoan_sinhvien"
+                                 : (TeacherRadio.IsChecked == true) ? "taikhoan_giangvien"
+                                 : null;
 
                 if (tableName == null)
                 {
                     MessageBox.Show("Vui lòng chọn loại tài khoản.");
                     return;
                 }
-
 
                 if (CheckLogin(username, password, tableName))
                 {
@@ -64,24 +63,25 @@ namespace LoginDemo
                 {
                     MessageBox.Show("Sai tài khoản hoặc mật khẩu.");
                 }
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show($":\n{ex.Message}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
             }
-
         }
-
 
         private void ForgotPassword_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             new ForgotPasswordWindow().ShowDialog();
         }
+
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
         {
-            base.OnClosing(e);
+            var result = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Xác nhận", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (result != MessageBoxResult.Yes)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

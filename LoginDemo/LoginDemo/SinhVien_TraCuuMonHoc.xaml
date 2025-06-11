@@ -1,0 +1,141 @@
+﻿<UserControl x:Class="LoginDemo.SinhVien_TraCuuMonHoc"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LoginDemo"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <!-- Kế thừa toàn bộ style từ GiaoVien_XemThongTin -->
+        <Style x:Key="PrimaryButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#2196F3"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#1976D2"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="5"
+                        Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#1976D2"/>
+                                <Setter TargetName="border" Property="RenderTransform">
+                                    <Setter.Value>
+                                        <ScaleTransform ScaleX="0.97" ScaleY="0.97"/>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter TargetName="border" Property="RenderTransformOrigin" Value="0.5,0.5"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="SearchButtonStyle" TargetType="Button" BasedOn="{StaticResource PrimaryButtonStyle}">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="Margin" Value="10,0,0,0"/>
+        </Style>
+
+        <Style x:Key="StandardTextBoxStyle" TargetType="TextBox">
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="2,0"/>
+            <!-- Giảm padding ngang và bỏ padding dọc -->
+            <Setter Property="Margin" Value="0,0,5,5"/>
+            <!-- Điều chỉnh margin -->
+            <Setter Property="FontSize" Value="12"/>
+            <!-- Giảm cỡ chữ nếu cần -->
+        </Style>
+
+        <Style x:Key="HeaderTextBlockStyle" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="Margin" Value="0,0,10,0"/>
+        </Style>
+
+        <Style x:Key="SectionHeaderStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="#1976D2"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Border Background="#F0F0F0" CornerRadius="10" Padding="15">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+            <!-- Phần tìm kiếm -->
+            <Border Grid.Row="1" Background="#F0F0F0" CornerRadius="5" Padding="10" Margin="0,0,0,15">
+                <StackPanel>
+                    <TextBlock Text="Thông tin học phần" Style="{StaticResource SectionHeaderStyle}"/>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Tên học phần:" Style="{StaticResource HeaderTextBlockStyle}"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource StandardTextBoxStyle}" Margin="0,0,20,5"/>
+
+                        <TextBlock Grid.Row="0" Grid.Column="2" Text="Số tín chỉ:" Style="{StaticResource HeaderTextBlockStyle}"/>
+                        <TextBox Grid.Row="0" Grid.Column="3" Style="{StaticResource StandardTextBoxStyle}" Margin="0,0,0,5"/>
+
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="Mã học phần:" Style="{StaticResource HeaderTextBlockStyle}"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource StandardTextBoxStyle}" Margin="0,0,20,0"/>
+
+                        <TextBlock Grid.Row="1" Grid.Column="2" Text="Khoa/Viện:" Style="{StaticResource HeaderTextBlockStyle}"/>
+                        <TextBox Grid.Row="1" Grid.Column="3" Style="{StaticResource StandardTextBoxStyle}"/>
+                    </Grid>
+
+                    <Button x:Name="btnTimKiem"  
+                            Style="{StaticResource SearchButtonStyle}" 
+                            HorizontalAlignment="Right" Margin="0,10,0,0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="🔍" Margin="0,0,5,0"/>
+                            <TextBlock Text="Tìm kiếm"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Border>
+
+            <!-- Kết quả tra cứu -->
+            <DataGrid Grid.Row="2" x:Name="dgKetQua" AutoGenerateColumns="False"
+                      Background="#F0F0F0"  BorderThickness="1"
+                      ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Mã học phần" Binding="{Binding MaHocPhan}" Width="120"/>
+                    <DataGridTextColumn Header="Tên học phần" Binding="{Binding TenHocPhan}" Width="*"/>
+                    <DataGridTextColumn Header="Số tín chỉ" Binding="{Binding SoTinChi}" Width="80"/>
+                    <DataGridTextColumn Header="Khoa/Viện" Binding="{Binding KhoaVien}" Width="150"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Border>
+</UserControl>

@@ -1,0 +1,134 @@
+﻿<UserControl x:Class="LoginDemo.GiaoVien_DoiMatKhau"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <!-- Style cho các nút chức năng -->
+        <Style x:Key="SmallButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#2196F3"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#1976D2"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Padding" Value="5,0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="3"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#1976D2"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="PrimaryButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#2196F3"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#1976D2"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="5"
+                        Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#1976D2"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="SaveButtonStyle" TargetType="Button" BasedOn="{StaticResource PrimaryButtonStyle}">
+            <Setter Property="Background" Value="#4CAF50"/>
+            <Setter Property="BorderBrush" Value="#388E3C"/>
+        </Style>
+
+        <Style x:Key="PasswordBoxStyle" TargetType="PasswordBox">
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+
+        <Style x:Key="TextBoxStyle" TargetType="TextBox">
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Border Background="#F0F0F0" CornerRadius="10" Padding="15">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Mật khẩu cũ -->
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,10">
+                <TextBlock Text="Mật khẩu cũ:" Width="120" FontWeight="Bold" VerticalAlignment="Center"/>
+                <PasswordBox x:Name="txtMatKhauCu" Width="200" Margin="5,0,10,0" Style="{StaticResource PasswordBoxStyle}"/>
+                <TextBox x:Name="txtMatKhauCuVisible" Width="200" Margin="5,0,10,0" Style="{StaticResource TextBoxStyle}" Visibility="Collapsed"/>
+                <Button x:Name="btnHienCu" Content="Hiện" Width="50" Style="{StaticResource SmallButtonStyle}" Click="btnHienCu_Click"/>
+            </StackPanel>
+
+            <!-- Mật khẩu mới -->
+            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,10">
+                <TextBlock Text="Mật khẩu mới:" Width="120" FontWeight="Bold" VerticalAlignment="Center"/>
+                <PasswordBox x:Name="txtMatKhauMoi" Width="200" Margin="5,0,10,0" Style="{StaticResource PasswordBoxStyle}"/>
+                <TextBox x:Name="txtMatKhauMoiVisible" Width="200" Margin="5,0,10,0" Style="{StaticResource TextBoxStyle}" Visibility="Collapsed"/>
+                <Button x:Name="btnHienMoi" Content="Hiện" Width="50" Style="{StaticResource SmallButtonStyle}" Click="btnHienMoi_Click"/>
+            </StackPanel>
+
+            <!-- Nhập lại mật khẩu mới -->
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,10">
+                <TextBlock Text="Nhập lại:" Width="120" FontWeight="Bold" VerticalAlignment="Center"/>
+                <PasswordBox x:Name="txtNhapLai" Width="200" Margin="5,0,10,0" Style="{StaticResource PasswordBoxStyle}"/>
+                <TextBox x:Name="txtNhapLaiVisible" Width="200" Margin="5,0,10,0" Style="{StaticResource TextBoxStyle}" Visibility="Collapsed"/>
+                <Button x:Name="btnHienLai" Content="Hiện" Width="50" Style="{StaticResource SmallButtonStyle}" Click="btnHienLai_Click"/>
+            </StackPanel>
+
+            <!-- Gợi ý hỗ trợ -->
+            <TextBlock Grid.Row="3" TextWrapping="Wrap" Margin="10,20" FontSize="12"
+                      Foreground="DarkSlateGray" TextAlignment="Center" VerticalAlignment="Center">
+                Nếu cần hỗ trợ thêm, hãy liên hệ phòng đào tạo
+                qua email phongdaotao@sis.hust.edu.vn !
+            </TextBlock>
+
+            <!-- Nút Lưu -->
+            <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,15,0,0">
+                <Button x:Name="btnLuu" Width="100" Style="{StaticResource SaveButtonStyle}">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock Text="💾" FontSize="14" Margin="0,0,5,0"/>
+                        <TextBlock Text="Lưu"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>

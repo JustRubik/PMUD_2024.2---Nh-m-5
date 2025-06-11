@@ -4,38 +4,26 @@ namespace LoginDemo
 {
     public partial class MainWindow : Window
     {
-        public MainWindow(string username)
+        public bool isLoggingOut;
+        private readonly LoginWindow loginWindow;
+
+        public MainWindow(string username, LoginWindow loginWindow)
         {
             InitializeComponent();
             Title = $"Xin chào {username}";
+            this.loginWindow = loginWindow;
+
         }
 
-        /*
-        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        private void Account_Click(object sender, RoutedEventArgs e)
         {
-            LoginWindow loginWindow = new()
-            {
-                Owner = this
-            };
-            Hide();
-
-            bool? result = loginWindow.ShowDialog();
-
-            if (result == true)
-            {
-                ShowDialog(); // hiện lại cửa sổ chính
-            }
-            else
-            {
-                Close(); // đóng cửa sổ chính nếu đăng nhập không thành công    
-            }
-        }*/
+            SubMenuPopup_Account.IsOpen = !SubMenuPopup_Account.IsOpen;
+        }
 
         private void HandleGPA_Click(object sender, RoutedEventArgs e)
         {
             MainContentControl.Content = new XuLyGPA();
         }
-       
 
         private void HandleCPA_Click(object sender, RoutedEventArgs e)
         {
@@ -87,9 +75,26 @@ namespace LoginDemo
             MainContentControl.Content = new DanhMucKhoaVien();
         }
 
+        private void LogOut_Click(object sender, RoutedEventArgs e)
+        {
+            isLoggingOut = true;
+            loginWindow.Show();     // Hiện lại LoginWindow đã bị ẩn
+            Application.Current.MainWindow = loginWindow;
+            Close();                // Đóng MainWindow (có thể dùng Hide() nếu muốn ẩn thay vì đóng)
+        }
+
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
         {
-            base.OnClosing(e);
+            if (!isLoggingOut)
+            {
+                var result = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Xác nhận", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                if (result != MessageBoxResult.Yes)
+                {
+                    e.Cancel = true;
+                }
+                else
+                    Application.Current.Shutdown();
+            }
         }
     }
 }

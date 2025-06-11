@@ -34,7 +34,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\icon-user.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\logo_dai_hoc_bkhn.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

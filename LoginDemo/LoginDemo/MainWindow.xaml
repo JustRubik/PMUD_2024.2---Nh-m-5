@@ -12,6 +12,54 @@
 
         WindowState="Maximized">
 
+    <Window.Resources>
+        <Style x:Key="MainMenuHeaderTextBlock" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Padding" Value="0,4"/>
+        </Style>
+
+        <Style x:Key="SubMenuItemStyle" TargetType="MenuItem">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="DarkBlue"/>
+            <Setter Property="Padding" Value="10,4"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#D0E7FF"/>
+                    <Setter Property="Foreground" Value="Blue"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#D0E7FF"/>
+                    <Setter Property="Foreground" Value="Blue"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="PopupButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="DarkBlue"/>
+            <Setter Property="Padding" Value="10,4"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#D0E7FF"/>
+                    <Setter Property="Foreground" Value="Blue"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#A0C5FF"/>
+                    <Setter Property="Foreground" Value="Blue"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+    </Window.Resources>
+
     <DockPanel>
         
         <!--HEADER màu đỏ-->
@@ -26,27 +74,27 @@
                 <TextBlock Text="HỆ THỐNG QUẢN LÝ SINH VIÊN" FontSize="19" Foreground="White"/>
             </StackPanel>
 
-            <!-- Nút ba chấm thay cho ĐĂNG NHẬP -->
-            <Button x:Name="MenuButton"
+            <!-- Nút account -->
+            <Button x:Name="AccountButton"
+                    Click="Account_Click"
                     Width="60" Height="40"
                     FontWeight="Bold"
                     FontSize="24"
                     Background="Transparent"
                     Foreground="White"
                     BorderThickness="0"
-                    Margin="500,0,20,0"
+                    Margin="600,0,20,0"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Right"
                     Cursor="Hand">
-                <Image Source="/Images/icon-user.png" Stretch="Fill"/>
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="border"
-                    Background="{TemplateBinding Background}"
-                    CornerRadius="20"
-                    BorderBrush="{TemplateBinding BorderBrush}"
-                    BorderThickness="{TemplateBinding BorderThickness}">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="20"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                            <Image Source="/Images/icon-user.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
@@ -59,36 +107,28 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
+            <!-- Popup submenu hiển thị bên phải nút -->
+            <Popup x:Name="SubMenuPopup_Account"
+                   Placement="Right"
+                   PlacementTarget="{Binding ElementName=AccountButton}"
+                   StaysOpen="False"
+                   AllowsTransparency="True"
+                   PopupAnimation="Fade">
+                <Border Background="White"
+                        CornerRadius="5"
+                        Padding="10">
+                    <StackPanel>
+                        <Button Content="Tài khoản" Style="{StaticResource PopupButtonStyle}"/>
+                        <Button Content="Cài đặt" Style="{StaticResource PopupButtonStyle}"/>
+                        <Button Content="Đăng xuất" Click="LogOut_Click" Style="{StaticResource PopupButtonStyle}"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
         </StackPanel>
 
         <!--Menu-->
         <Menu DockPanel.Dock="Top" Background="Black" Height="34">
-            <Menu.Resources>
-                <Style x:Key="MainMenuHeaderTextBlock" TargetType="TextBlock">
-                    <Setter Property="Foreground" Value="White"/>
-                    <Setter Property="FontSize" Value="17"/>
-                    <Setter Property="FontWeight" Value="SemiBold"/>
-                    <Setter Property="Padding" Value="0,4"/>
-                </Style>
-
-                <Style x:Key="SubMenuItemStyle" TargetType="MenuItem">
-                    <Setter Property="Background" Value="Transparent"/>
-                    <Setter Property="Foreground" Value="DarkBlue"/>
-                    <Setter Property="Padding" Value="10,4"/>
-                    <Setter Property="FontSize" Value="16"/>
-                    <Setter Property="FontWeight" Value="Normal"/>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#D0E7FF"/>
-                            <Setter Property="Foreground" Value="Blue"/>
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" Value="#D0E7FF"/>
-                            <Setter Property="Foreground" Value="Blue"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Menu.Resources>
+            
 
             <MenuItem Margin="20,0,20,0">
                 <MenuItem.Header>
@@ -127,7 +167,9 @@
                 <MenuItem.Header>
                     <TextBlock Text="THỐNG KÊ" Style="{StaticResource MainMenuHeaderTextBlock}"/>
                 </MenuItem.Header>
-                <MenuItem Header="Thống kê kết quả học tập" Style="{StaticResource SubMenuItemStyle}"/>
+                <MenuItem Header="Thống kê theo kì" Style="{StaticResource SubMenuItemStyle}"/>
+                <MenuItem Header="Thống kê theo khóa" Style="{StaticResource SubMenuItemStyle}"/>
+                <MenuItem Header="Thống kê sinh viên đạt học bổng" Style="{StaticResource SubMenuItemStyle}"/>
             </MenuItem>
 
             <MenuItem Margin="0,0,20,0">
