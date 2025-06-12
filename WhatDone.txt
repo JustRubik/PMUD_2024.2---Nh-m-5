@@ -7,3 +7,10 @@ Cập nhật lại 1 vài chức năng liên quan đến các file mainwindow, l
 >>1:33AM 11/06/25
 --
 Đã sửa login lên làm trang mặc định, main window sẽ xử lí theo username.
+--
+
+>>7:34PM 12/06/25
+--
+Đặt lại tên Project
+Thêm phần Window cho mỗi loại người dùng
+--

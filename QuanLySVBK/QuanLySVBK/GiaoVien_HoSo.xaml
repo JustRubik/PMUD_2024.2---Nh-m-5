@@ -1,0 +1,121 @@
+﻿<UserControl x:Class="QuanLySVBK.GiaoVien_HoSo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="600">
+
+    <UserControl.Resources>
+        <!-- Style đồng bộ với các UserControl khác -->
+        <Style x:Key="PrimaryButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#2196F3"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#1976D2"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="5"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#1976D2"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="HeaderTextStyle" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="Margin" Value="0,0,10,0"/>
+        </Style>
+
+        <Style x:Key="ReadOnlyTextBoxStyle" TargetType="TextBox">
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="IsReadOnly" Value="True"/>
+            <Setter Property="Background" Value="#FAFAFA"/>
+            <Setter Property="BorderBrush" Value="#DDD"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Margin" Value="0,5"/>
+        </Style>
+
+        <Style x:Key="EditableTextBoxStyle" TargetType="TextBox" BasedOn="{StaticResource ReadOnlyTextBoxStyle}">
+            <Setter Property="IsReadOnly" Value="False"/>
+            <Setter Property="Background" Value="White"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Border Background="#F0F0F0" CornerRadius="10" Padding="20">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Tiêu đề -->
+            <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="HỒ SƠ GIẢNG VIÊN" 
+                      FontSize="18" FontWeight="Bold" HorizontalAlignment="Center"
+                      Margin="0,0,0,20" Foreground="#1976D2"/>
+
+            <!-- Các trường thông tin -->
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Họ tên:" Style="{StaticResource HeaderTextStyle}"/>
+            <TextBox Grid.Row="1" Grid.Column="1" x:Name="txtHoTen" Style="{StaticResource ReadOnlyTextBoxStyle}"/>
+
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Ngày sinh:" Style="{StaticResource HeaderTextStyle}"/>
+            <TextBox Grid.Row="2" Grid.Column="1" x:Name="txtNgaySinh" Style="{StaticResource ReadOnlyTextBoxStyle}"/>
+
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Giới tính:" Style="{StaticResource HeaderTextStyle}"/>
+            <TextBox Grid.Row="3" Grid.Column="1" x:Name="txtGioiTinh" Style="{StaticResource ReadOnlyTextBoxStyle}"/>
+
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="Quê quán:" Style="{StaticResource HeaderTextStyle}"/>
+            <TextBox Grid.Row="4" Grid.Column="1" x:Name="txtQueQuan" Style="{StaticResource ReadOnlyTextBoxStyle}"/>
+
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="Viện:" Style="{StaticResource HeaderTextStyle}"/>
+            <TextBox Grid.Row="5" Grid.Column="1" x:Name="txtVien" Style="{StaticResource ReadOnlyTextBoxStyle}" TextWrapping="Wrap"/>
+
+            <TextBlock Grid.Row="6" Grid.Column="0" Text="Email:" Style="{StaticResource HeaderTextStyle}"/>
+            <TextBox Grid.Row="6" Grid.Column="1" x:Name="txtEmail" Style="{StaticResource ReadOnlyTextBoxStyle}"/>
+
+            <TextBlock Grid.Row="7" Grid.Column="0" Text="Số điện thoại:" Style="{StaticResource HeaderTextStyle}"/>
+            <TextBox Grid.Row="7" Grid.Column="1" x:Name="txtSoDienThoai" Style="{StaticResource ReadOnlyTextBoxStyle}"/>
+
+            <TextBlock Grid.Row="8" Grid.Column="0" Text="CCCD:" Style="{StaticResource HeaderTextStyle}"/>
+            <TextBox Grid.Row="8" Grid.Column="1" x:Name="txtCCCD" Style="{StaticResource ReadOnlyTextBoxStyle}"/>
+
+            <!-- Nút điều khiển -->
+            <StackPanel Grid.Row="10" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+                <Button x:Name="btnHuy" Content="Hủy" Width="90" Style="{StaticResource PrimaryButtonStyle}" Margin="0,0,10,0" Visibility="Collapsed"/>
+                <Button x:Name="btnLuu" Content="Lưu" Width="90" Style="{StaticResource PrimaryButtonStyle}" Background="#4CAF50" BorderBrush="#388E3C" Visibility="Collapsed"/>
+                <Button x:Name="btnChinhSua" Content="Chỉnh sửa" Width="100" Style="{StaticResource PrimaryButtonStyle}"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>

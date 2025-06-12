@@ -1,0 +1,117 @@
+﻿<Window
+    x:Class="QuanLySVBK.LoginWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:av="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="av"
+    Title="Đăng nhập"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="SingleBorderWindow"
+    WindowState="Maximized"
+    Background="Transparent"
+    MinWidth="400" MinHeight="550">
+
+    <Grid>
+        <!-- Lớp nền -->
+        <Grid>
+            <Image Source="Images/background_man_hinh_dang_nhap.jpg" Stretch="Fill" />
+            <Rectangle Fill="#CCF02A2A" />
+        </Grid>
+
+        <!-- Grid chính chia bố cục -->
+        <Grid Margin="50">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Khung đăng nhập ở giữa -->
+            <Border Grid.Row="1" Grid.Column="1"
+                    MinWidth="300" MaxWidth="400"
+                    Padding="20"
+                    Background="White"
+                    CornerRadius="10"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+                <Border.Effect>
+                    <DropShadowEffect />
+                </Border.Effect>
+
+                <StackPanel>
+                    <TextBlock Text="Đăng nhập" FontWeight="Bold" FontSize="24"
+                               HorizontalAlignment="Center" Margin="0,10" />
+
+                    <!-- Logo -->
+                    <Image Source="Images/logo_dai_hoc_bkhn.PNG"
+                           Height="100"
+                           HorizontalAlignment="Center" Margin="0,10"/>
+
+                    <!-- Phân quyền -->
+                    <TextBlock Text="Bạn là:" FontSize="12" Margin="0,10,0,5" />
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <RadioButton x:Name="AdminRadio" Content="Admin" GroupName="Role" Margin="10,0"/>
+                        <RadioButton x:Name="StudentRadio" Content="Sinh viên" GroupName="Role" Margin="10,0"/>
+                        <RadioButton x:Name="TeacherRadio" Content="Giảng viên" GroupName="Role" Margin="10,0"/>
+                    </StackPanel>
+
+                    <!-- Tài khoản -->
+                    <TextBlock Text="Tài khoản" FontSize="12" Margin="0,10,0,0"/>
+                    <DockPanel>
+                        <Image Source="Images/icon-user.png" Width="16" Height="16" Margin="0,0,5,0"/>
+                        <TextBox x:Name="UsernameBox" ToolTip="Vui lòng nhập email đăng nhập" Width="Auto"/>
+                    </DockPanel>
+
+                    <!-- Mật khẩu -->
+                    <TextBlock Text="Mật khẩu" FontSize="12" Margin="0,10,0,0"/>
+                    <DockPanel>
+                        <Image Source="Images/icon-lock.png" Width="16" Height="16" Margin="0,0,5,0"/>
+                        <PasswordBox x:Name="PasswordBox" ToolTip="Vui lòng nhập mật khẩu" Width="Auto"/>
+                    </DockPanel>
+
+                    <!-- Quên mật khẩu -->
+                    <TextBlock x:Name="ForgotPassword" Text="Quên mật khẩu?" FontSize="10"
+                               HorizontalAlignment="Right" Margin="0,5,0,0"
+                               Foreground="Gray" Cursor="Hand"
+                               MouseDown="ForgotPassword_Click" />
+
+                    <!-- Nút đăng nhập -->
+                    <Button x:Name="LoginButton" Content="ĐĂNG NHẬP" Height="40"
+                            FontWeight="Bold" Background="#9CABF5" Foreground="White"
+                            BorderThickness="0" Margin="0,20,0,0"
+                            Click="LoginButton_Click" Cursor="Hand" IsDefault="True">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border x:Name="border"
+                                        Background="{TemplateBinding Background}"
+                                        CornerRadius="20"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter TargetName="border" Property="Background" Value="#7A93F7"/>
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter TargetName="border" Property="Background" Value="#5A75E6"/>
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="False">
+                                        <Setter TargetName="border" Property="Background" Value="#CCC"/>
+                                        <Setter Property="Foreground" Value="Gray"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

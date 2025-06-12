@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="QuanLySVBK.DanhMucKhoaVien"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Height="Auto" Width="Auto">
+    <Border Background="#F0F0F0" CornerRadius="10" Padding="0" Width="950" Height="480">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="150"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Phần nội dung chính -->
+            <Grid Grid.Column="0" Margin="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Expander chứa thông tin khoa/viện -->
+                <Expander Grid.Row="0"  IsExpanded="True" 
+                          FontSize="13" Margin="0,0,0,10">
+                    <StackPanel Margin="10">
+                        <!-- Dòng 1: Tên viện + Viện trưởng -->
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <StackPanel Orientation="Horizontal" Width="400">
+                                <TextBlock Text="Tên Viện:" Width="100" VerticalAlignment="Center" FontSize="13"/>
+                                <TextBox x:Name="txtTenVien" Width="200" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                                <TextBlock Text="Viện trưởng:" Width="100" VerticalAlignment="Center" FontSize="13"/>
+                                <TextBox x:Name="txtVienTruong" Width="200" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <!-- Dòng 2: Mã viện + Website -->
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <StackPanel Orientation="Horizontal" Width="400">
+                                <TextBlock Text="Mã Viện:" Width="100" VerticalAlignment="Center" FontSize="13"/>
+                                <TextBox x:Name="txtMaVien" Width="200" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                                <TextBlock Text="Website:" Width="100" VerticalAlignment="Center" FontSize="13"/>
+                                <TextBox x:Name="txtWebsite" Width="200" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <!-- Dòng 3: Địa chỉ -->
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Địa chỉ:" Width="100" VerticalAlignment="Center" FontSize="13"/>
+                            <TextBox x:Name="txtDiaChi" Width="400" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Expander>
+
+                <!-- DataGrid danh sách khoa/viện -->
+                <DataGrid Grid.Row="1" x:Name="dgKhoaVien" AutoGenerateColumns="False" Margin="0,10,0,0">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Mã Viện" Binding="{Binding MaVien}" Width="100"/>
+                        <DataGridTextColumn Header="Tên Viện" Binding="{Binding TenVien}" Width="*"/>
+                        <DataGridTextColumn Header="Viện trưởng" Binding="{Binding VienTruong}" Width="200"/>
+                        <DataGridTextColumn Header="Website" Binding="{Binding Website}" Width="150"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+
+            <!-- Panel nút chức năng -->
+            <Border Grid.Column="1" Background="#FFF0F0F0" BorderBrush="#FFCCCCCC" BorderThickness="1,0,0,0" CornerRadius="0 10 10 0">
+                <StackPanel VerticalAlignment="Center" Margin="10" HorizontalAlignment="Stretch">
+                    <Button x:Name="btnTimKiem" Content="TÌM 🔍" Margin="0,0,0,12" Padding="10,5"
+                            Background="#5DADE2" Foreground="White" FontWeight="SemiBold"/>
+
+                    <Button x:Name="btnThemMoi" Content="THÊM ➕" Margin="0,0,0,12" Padding="10,5"
+                            Background="#2ECC71" Foreground="White" FontWeight="SemiBold"/>
+
+                    <Button x:Name="btnXoa" Content="XÓA ❌" Margin="0,0,0,12" Padding="10,5"
+                            Background="#E74C3C" Foreground="White" FontWeight="SemiBold"/>
+
+                    <Button x:Name="btnCapNhat" Content="CẬP NHẬT 🔄" Margin="0,0,0,12" Padding="10,5"
+                            Background="#9B59B6" Foreground="White" FontWeight="SemiBold"/>
+
+                    <Button x:Name="btnInDS" Content="IN 🖨️" Padding="10,5"
+                            Background="#F39C12" Foreground="White" FontWeight="SemiBold"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Border>
+</UserControl>
