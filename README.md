@@ -7,3 +7,5 @@ File này không có gì đâu, chỉ có giới thiệu nhóm và thành viên 
 2. Lương Đức Minh 20224061
 3. Phạm Minh Hiếu  20213923
 4. Nguyễn Trọng Tiến  20224159
+
+Cập nhật lần cuối: Hiện đã có file exe
