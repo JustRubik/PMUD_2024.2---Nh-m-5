@@ -1,37 +1,23 @@
-﻿using Microsoft.Data.SqlClient;
-using System.Windows;
+﻿using System.Windows;
+using QuanLySVBK.DBHelpers;
 
 namespace QuanLySVBK
 {
     public partial class LoginWindow : Window
     {
+        //private readonly string connectionString = "Server=admin-pc\\sqlexpress;Database=QuanLyDiemSVBK;Trusted_Connection=True;TrustServerCertificate=True;";
+
         public LoginWindow()
         {
             InitializeComponent();
-
         }
 
-        private void OpenMainWindow(string username, string role)
+        private void OpenMainWindow(string username, string id, string role)
         {
-            MainWindow afterLogin = new(username, role, this);
+            MainWindow afterLogin = new(username, id, role, this);
             Application.Current.MainWindow = afterLogin;
             afterLogin.Show();
             Hide();
-        }
-
-        // Kiểm tra đăng nhập
-        private static bool CheckLogin(string username, string password, string tableName)
-        {
-            string connectionString = "Server=admin-pc\\sqlexpress;Database=QuanLyDiemSVBK;Trusted_Connection=True;TrustServerCertificate=True;";
-            using SqlConnection conn = new(connectionString);
-            conn.Open();
-
-            string query = $"SELECT Password FROM {tableName} WHERE Username = @username";
-            using SqlCommand cmd = new(query, conn);
-            cmd.Parameters.AddWithValue("@username", username);
-            object result = cmd.ExecuteScalar();
-
-            return result is string storedPassword && storedPassword == password;
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
@@ -46,23 +32,39 @@ namespace QuanLySVBK
                                  : (TeacherRadio.IsChecked == true) ? "taikhoan_giangvien"
                                  : null;
 
+                if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+                {
+                    MessageBox.Show("Vui lòng nhập đầy đủ tài khoản và mật khẩu.");
+                    return;
+                }
+
                 if (tableName == null)
                 {
                     MessageBox.Show("Vui lòng chọn loại tài khoản.");
                     return;
                 }
 
-                if (CheckLogin(username, password, tableName))
+                string? role = tableName switch
+                {
+                    "Admin" => "admin",
+                    "taikhoan_sinhvien" => "student",
+                    "taikhoan_giangvien" => "lecturer",
+                    _ => null
+                };
+
+                if (role == null)
+                {
+                    MessageBox.Show("Role không hợp lệ.");
+                    return;
+                }
+
+                // Kiểm tra đăng nhập
+                string? id = LoginHelper.TryLogin(username, password, tableName);
+
+                if (id != null)
                 {
                     MessageBox.Show("Đăng nhập thành công!");
-                    string? role = (tableName == "Admin") ? "admin"
-                            : (tableName == "taikhoan_sinhvien") ? "student"
-                            : (tableName == "taikhoan_giangvien") ? "lecturer"
-                            : null;
-                    if (role != null)
-                    {
-                        OpenMainWindow(username, role);
-                    }
+                    OpenMainWindow(username, id, role);
                 }
                 else
                 {
@@ -71,7 +73,7 @@ namespace QuanLySVBK
             }
             catch (Exception ex)
             {
-                MessageBox.Show($":\n{ex.Message}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Lỗi:\n{ex.Message}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -82,9 +84,9 @@ namespace QuanLySVBK
 
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
         {
-            if(Application.Current.MainWindow == this)
+            if (Application.Current.MainWindow == this)
             {
-                var result = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Xác nhận", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                MessageBoxResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Xác nhận", MessageBoxButton.YesNo, MessageBoxImage.Warning);
                 if (result != MessageBoxResult.Yes)
                 {
                     e.Cancel = true;

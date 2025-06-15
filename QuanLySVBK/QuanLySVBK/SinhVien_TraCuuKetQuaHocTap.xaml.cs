@@ -22,13 +22,13 @@ namespace QuanLySVBK
             // Có thể thêm code tải dữ liệu từ CSDL ở đây
         }
 
-        private void btnTraCuuKi_Click(object sender, RoutedEventArgs e)
+        private void BtnTraCuuKi_Click(object sender, RoutedEventArgs e)
         {
             // Xử lý tra cứu theo kì
             MessageBox.Show("Chức năng tra cứu theo kì sẽ được triển khai sau!");
         }
 
-        private void btnTraCuuMonHoc_Click(object sender, RoutedEventArgs e)
+        private void BtnTraCuuMonHoc_Click(object sender, RoutedEventArgs e)
         {
             // Xử lý tra cứu theo môn học
             MessageBox.Show("Chức năng tra cứu theo môn học sẽ được triển khai sau!");

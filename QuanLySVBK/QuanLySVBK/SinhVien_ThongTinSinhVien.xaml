@@ -183,7 +183,7 @@
             </StackPanel>
 
             <!-- Nút chỉnh sửa -->
-            <Button Grid.Row="5" x:Name="btnSuaThongTin" Content="Sửa thông tin"
+            <Button Grid.Row="5" x:Name="BtnSuaThongTin" Content="Sửa thông tin"
                     Style="{StaticResource EditButtonStyle}" HorizontalAlignment="Right"/>
         </Grid>
     </Border>

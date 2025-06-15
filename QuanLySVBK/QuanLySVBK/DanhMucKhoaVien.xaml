@@ -27,11 +27,11 @@
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
                             <StackPanel Orientation="Horizontal" Width="400">
                                 <TextBlock Text="Tên Viện:" Width="100" VerticalAlignment="Center" FontSize="13"/>
-                                <TextBox x:Name="txtTenVien" Width="200" VerticalAlignment="Center"/>
+                                <TextBox x:Name="TxtTenVien" Width="200" VerticalAlignment="Center"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
                                 <TextBlock Text="Viện trưởng:" Width="100" VerticalAlignment="Center" FontSize="13"/>
-                                <TextBox x:Name="txtVienTruong" Width="200" VerticalAlignment="Center"/>
+                                <TextBox x:Name="TxtVienTruong" Width="200" VerticalAlignment="Center"/>
                             </StackPanel>
                         </StackPanel>
 
@@ -39,18 +39,18 @@
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
                             <StackPanel Orientation="Horizontal" Width="400">
                                 <TextBlock Text="Mã Viện:" Width="100" VerticalAlignment="Center" FontSize="13"/>
-                                <TextBox x:Name="txtMaVien" Width="200" VerticalAlignment="Center"/>
+                                <TextBox x:Name="TxtMaVien" Width="200" VerticalAlignment="Center"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
                                 <TextBlock Text="Website:" Width="100" VerticalAlignment="Center" FontSize="13"/>
-                                <TextBox x:Name="txtWebsite" Width="200" VerticalAlignment="Center"/>
+                                <TextBox x:Name="TxtWebsite" Width="200" VerticalAlignment="Center"/>
                             </StackPanel>
                         </StackPanel>
 
                         <!-- Dòng 3: Địa chỉ -->
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Địa chỉ:" Width="100" VerticalAlignment="Center" FontSize="13"/>
-                            <TextBox x:Name="txtDiaChi" Width="400" VerticalAlignment="Center"/>
+                            <TextBox x:Name="TxtDiaChi" Width="400" VerticalAlignment="Center"/>
                         </StackPanel>
                     </StackPanel>
                 </Expander>
@@ -69,19 +69,19 @@
             <!-- Panel nút chức năng -->
             <Border Grid.Column="1" Background="#FFF0F0F0" BorderBrush="#FFCCCCCC" BorderThickness="1,0,0,0" CornerRadius="0 10 10 0">
                 <StackPanel VerticalAlignment="Center" Margin="10" HorizontalAlignment="Stretch">
-                    <Button x:Name="btnTimKiem" Content="TÌM 🔍" Margin="0,0,0,12" Padding="10,5"
+                    <Button x:Name="BtnTimKiem" Content="TÌM 🔍" Margin="0,0,0,12" Padding="10,5"
                             Background="#5DADE2" Foreground="White" FontWeight="SemiBold"/>
 
-                    <Button x:Name="btnThemMoi" Content="THÊM ➕" Margin="0,0,0,12" Padding="10,5"
+                    <Button x:Name="BtnThemMoi" Content="THÊM ➕" Margin="0,0,0,12" Padding="10,5"
                             Background="#2ECC71" Foreground="White" FontWeight="SemiBold"/>
 
-                    <Button x:Name="btnXoa" Content="XÓA ❌" Margin="0,0,0,12" Padding="10,5"
+                    <Button x:Name="BtnXoa" Content="XÓA ❌" Margin="0,0,0,12" Padding="10,5"
                             Background="#E74C3C" Foreground="White" FontWeight="SemiBold"/>
 
-                    <Button x:Name="btnCapNhat" Content="CẬP NHẬT 🔄" Margin="0,0,0,12" Padding="10,5"
+                    <Button x:Name="BtnCapNhat" Content="CẬP NHẬT 🔄" Margin="0,0,0,12" Padding="10,5"
                             Background="#9B59B6" Foreground="White" FontWeight="SemiBold"/>
 
-                    <Button x:Name="btnInDS" Content="IN 🖨️" Padding="10,5"
+                    <Button x:Name="BtnInDS" Content="IN 🖨️" Padding="10,5"
                             Background="#F39C12" Foreground="White" FontWeight="SemiBold"/>
                 </StackPanel>
             </Border>

@@ -22,13 +22,13 @@
                         <!-- Mã sinh viên -->
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
                             <TextBlock Text="MSSV:" Width="120" VerticalAlignment="Center" FontSize="13"/>
-                            <TextBox x:Name="txtMaSinhVien" Width="200"/>
+                            <TextBox x:Name="TxtMaSinhVien" Width="200"/>
                         </StackPanel>
 
                         <!-- Kì học -->
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
                             <TextBlock Text="Kì học:" Width="120" VerticalAlignment="Center" FontSize="13"/>
-                            <ComboBox x:Name="cboKiHoc" Width="200"/>
+                            <ComboBox x:Name="CboKiHoc" Width="200"/>
                         </StackPanel>
 
                         <!-- Nút hiển thị các môn -->
@@ -51,7 +51,7 @@
             <Border Grid.Column="1" Width="150" Background="#FFF0F0F0" BorderBrush="#FFCCCCCC" BorderThickness="1,0,0,0" CornerRadius="10">
                 <StackPanel VerticalAlignment="Center" Margin="10" HorizontalAlignment="Stretch">
                     <!-- Nút XỬ LÝ với emoji bánh răng -->
-                    <Button x:Name="btnXuLy" Margin="0,0,0,15" Background="#2E86C1" Foreground="White" Padding="10,5" HorizontalAlignment="Stretch">
+                    <Button x:Name="BtnXuLy" Margin="0,0,0,15" Background="#2E86C1" Foreground="White" Padding="10,5" HorizontalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                             <TextBlock Text="⚙️" FontSize="14" Margin="0,0,5,0"/>
                             <TextBlock Text="XỬ LÝ" FontWeight="SemiBold"/>
@@ -59,7 +59,7 @@
                     </Button>
 
                     <!-- Nút IN DANH SÁCH với emoji máy in -->
-                    <Button x:Name="btnInDanhSach" Padding="10,5" HorizontalAlignment="Stretch">
+                    <Button x:Name="BtnInDanhSach" Padding="10,5" HorizontalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                             <TextBlock Text="🖨️" FontSize="14" Margin="0,0,5,0"/>
                             <TextBlock Text="IN DANH SÁCH" FontWeight="SemiBold"/>

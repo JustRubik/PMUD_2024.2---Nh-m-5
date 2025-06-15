@@ -92,25 +92,25 @@
             <!-- Mật khẩu cũ -->
             <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,10">
                 <TextBlock Text="Mật khẩu cũ:" Width="120" FontWeight="Bold" VerticalAlignment="Center"/>
-                <PasswordBox x:Name="txtMatKhauCu" Width="200" Margin="5,0,10,0" Style="{StaticResource PasswordBoxStyle}"/>
-                <TextBox x:Name="txtMatKhauCuVisible" Width="200" Margin="5,0,10,0" Style="{StaticResource TextBoxStyle}" Visibility="Collapsed"/>
-                <Button x:Name="btnHienCu" Content="Hiện" Width="50" Style="{StaticResource SmallButtonStyle}" Click="btnHienCu_Click"/>
+                <PasswordBox x:Name="TxtMatKhauCu" Width="200" Margin="5,0,10,0" Style="{StaticResource PasswordBoxStyle}"/>
+                <TextBox x:Name="TxtMatKhauCuVisible" Width="200" Margin="5,0,10,0" Style="{StaticResource TextBoxStyle}" Visibility="Collapsed"/>
+                <Button x:Name="BtnHienCu" Content="Hiện" Width="50" Style="{StaticResource SmallButtonStyle}" Click="BtnHienCu_Click"/>
             </StackPanel>
 
             <!-- Mật khẩu mới -->
             <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,10">
                 <TextBlock Text="Mật khẩu mới:" Width="120" FontWeight="Bold" VerticalAlignment="Center"/>
-                <PasswordBox x:Name="txtMatKhauMoi" Width="200" Margin="5,0,10,0" Style="{StaticResource PasswordBoxStyle}"/>
-                <TextBox x:Name="txtMatKhauMoiVisible" Width="200" Margin="5,0,10,0" Style="{StaticResource TextBoxStyle}" Visibility="Collapsed"/>
-                <Button x:Name="btnHienMoi" Content="Hiện" Width="50" Style="{StaticResource SmallButtonStyle}" Click="btnHienMoi_Click"/>
+                <PasswordBox x:Name="TxtMatKhauMoi" Width="200" Margin="5,0,10,0" Style="{StaticResource PasswordBoxStyle}"/>
+                <TextBox x:Name="TxtMatKhauMoiVisible" Width="200" Margin="5,0,10,0" Style="{StaticResource TextBoxStyle}" Visibility="Collapsed"/>
+                <Button x:Name="BtnHienMoi" Content="Hiện" Width="50" Style="{StaticResource SmallButtonStyle}" Click="BtnHienMoi_Click"/>
             </StackPanel>
 
             <!-- Nhập lại mật khẩu mới -->
             <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,10">
                 <TextBlock Text="Nhập lại:" Width="120" FontWeight="Bold" VerticalAlignment="Center"/>
-                <PasswordBox x:Name="txtNhapLai" Width="200" Margin="5,0,10,0" Style="{StaticResource PasswordBoxStyle}"/>
-                <TextBox x:Name="txtNhapLaiVisible" Width="200" Margin="5,0,10,0" Style="{StaticResource TextBoxStyle}" Visibility="Collapsed"/>
-                <Button x:Name="btnHienLai" Content="Hiện" Width="50" Style="{StaticResource SmallButtonStyle}" Click="btnHienLai_Click"/>
+                <PasswordBox x:Name="TxtNhapLai" Width="200" Margin="5,0,10,0" Style="{StaticResource PasswordBoxStyle}"/>
+                <TextBox x:Name="TxtNhapLaiVisible" Width="200" Margin="5,0,10,0" Style="{StaticResource TextBoxStyle}" Visibility="Collapsed"/>
+                <Button x:Name="BtnHienLai" Content="Hiện" Width="50" Style="{StaticResource SmallButtonStyle}" Click="BtnHienLai_Click"/>
             </StackPanel>
 
             <!-- Gợi ý hỗ trợ -->
@@ -122,7 +122,7 @@
 
             <!-- Nút Lưu -->
             <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,15,0,0">
-                <Button x:Name="btnLuu" Width="100" Style="{StaticResource SaveButtonStyle}">
+                <Button x:Name="BtnLuu" Width="100" Style="{StaticResource SaveButtonStyle}">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <TextBlock Text="💾" FontSize="14" Margin="0,0,5,0"/>
                         <TextBlock Text="Lưu"/>

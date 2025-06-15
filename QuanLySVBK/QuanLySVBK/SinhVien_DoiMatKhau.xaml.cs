@@ -44,19 +44,19 @@ namespace QuanLySVBK
             }
         }
 
-        private void btnHienCu_Click(object sender, RoutedEventArgs e)
+        private void BtnHienCu_Click(object sender, RoutedEventArgs e)
         {
-            TogglePasswordVisibility(txtMatKhauCu, txtMatKhauCuVisible, btnHienCu);
+            TogglePasswordVisibility(TxtMatKhauCu, TxtMatKhauCuVisible, BtnHienCu);
         }
 
-        private void btnHienMoi_Click(object sender, RoutedEventArgs e)
+        private void BtnHienMoi_Click(object sender, RoutedEventArgs e)
         {
-            TogglePasswordVisibility(txtMatKhauMoi, txtMatKhauMoiVisible, btnHienMoi);
+            TogglePasswordVisibility(TxtMatKhauMoi, TxtMatKhauMoiVisible, BtnHienMoi);
         }
 
-        private void btnHienLai_Click(object sender, RoutedEventArgs e)
+        private void BtnHienLai_Click(object sender, RoutedEventArgs e)
         {
-            TogglePasswordVisibility(txtNhapLai, txtNhapLaiVisible, btnHienLai);
+            TogglePasswordVisibility(TxtNhapLai, TxtNhapLaiVisible, BtnHienLai);
         }
     }
 }

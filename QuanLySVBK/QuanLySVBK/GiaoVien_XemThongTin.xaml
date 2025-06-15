@@ -91,25 +91,25 @@
             <!-- Header thông tin sinh viên -->
             <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,10">
                 <TextBlock Text="Mã sinh viên:" Width="100" FontWeight="Bold" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtMaSinhVien" Width="150" Margin="5,0,20,0" Style="{StaticResource StandardTextBoxStyle}"/>
+                <TextBox x:Name="TxtMaSinhVien" Width="150" Margin="5,0,20,0" Style="{StaticResource StandardTextBoxStyle}"/>
 
                 <TextBlock Text="Tên sinh viên:" Width="100" FontWeight="Bold" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtTenSinhVien" Width="250" IsReadOnly="True" Background="#EEE" Style="{StaticResource StandardTextBoxStyle}"/>
+                <TextBox x:Name="TxtTenSinhVien" Width="250" IsReadOnly="True" Background="#EEE" Style="{StaticResource StandardTextBoxStyle}"/>
             </StackPanel>
 
             <!-- Thông tin lớp và kì học -->
             <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,10">
                 <TextBlock Text="Mã lớp:" Width="100" FontWeight="Bold" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtMaLop" Width="150" Margin="5,0,20,0" Style="{StaticResource StandardTextBoxStyle}"/>
+                <TextBox x:Name="TxtMaLop" Width="150" Margin="5,0,20,0" Style="{StaticResource StandardTextBoxStyle}"/>
 
                 <TextBlock Text="Kì học hiện tại:" Width="100" FontWeight="Bold" VerticalAlignment="Center"/>
-                <ComboBox x:Name="cboKiHoc" Width="120" Margin="5,0,20,0" SelectedIndex="0" Height="32">
+                <ComboBox x:Name="CboKiHoc" Width="120" Margin="5,0,20,0" SelectedIndex="0" Height="32">
                     <ComboBoxItem Content="20223"/>
                     <ComboBoxItem Content="20222"/>
                     <ComboBoxItem Content="20221"/>
                 </ComboBox>
 
-                <Button x:Name="btnLoc" Width="90" Padding="8,0" Margin="5,0,0,0" Style="{StaticResource PrimaryButtonStyle}">
+                <Button x:Name="BtnLoc" Width="90" Padding="8,0" Margin="5,0,0,0" Style="{StaticResource PrimaryButtonStyle}">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <TextBlock Text="🔍" FontSize="14" Margin="0,0,5,0"/>
                         <TextBlock Text="Lọc"/>
@@ -130,7 +130,7 @@
             </DataGrid>
 
             <!-- Nút Sửa thông tin -->
-            <Button Grid.Row="3" x:Name="btnSuaThongTin" 
+            <Button Grid.Row="3" x:Name="BtnSuaThongTin" 
         HorizontalAlignment="Right" Margin="0,15,20,0"
         Padding="10,5" Width="130"
         Style="{StaticResource EditButtonStyle}">

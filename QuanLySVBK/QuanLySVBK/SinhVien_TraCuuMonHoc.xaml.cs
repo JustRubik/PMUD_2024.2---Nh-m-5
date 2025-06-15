@@ -35,7 +35,7 @@ namespace QuanLySVBK
             dgKetQua.ItemsSource = dt.DefaultView;
         }
 
-        private void btnTimKiem_Click(object sender, RoutedEventArgs e)
+        private void BtnTimKiem_Click(object sender, RoutedEventArgs e)
         {
             // Xử lý tìm kiếm ở đây
             MessageBox.Show("Chức năng tìm kiếm sẽ được triển khai sau!");

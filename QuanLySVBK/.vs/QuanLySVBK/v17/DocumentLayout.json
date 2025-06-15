@@ -1,32 +1,223 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\",
+  "WorkspaceRootPath": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|d:\\github\\pmud_2024.2\\logindemo\\quanlysvbk\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|d:\\github\\pmud_2024.2\\quanlysvbk\\quanlysvbk\\danhmucsinhvien.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|solutionrelative:quanlysvbk\\danhmucsinhvien.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|d:\\github\\pmud_2024.2\\quanlysvbk\\quanlysvbk\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|solutionrelative:quanlysvbk\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|d:\\github\\pmud_2024.2\\quanlysvbk\\quanlysvbk\\danhmucsinhvien.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|solutionrelative:quanlysvbk\\danhmucsinhvien.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|d:\\github\\pmud_2024.2\\quanlysvbk\\quanlysvbk\\dbhelpers\\listhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|solutionrelative:quanlysvbk\\dbhelpers\\listhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|d:\\github\\pmud_2024.2\\quanlysvbk\\quanlysvbk\\danhmucgiangvien.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|solutionrelative:quanlysvbk\\danhmucgiangvien.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|d:\\github\\pmud_2024.2\\quanlysvbk\\quanlysvbk\\danhmuchocphan.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|solutionrelative:quanlysvbk\\danhmuchocphan.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|d:\\github\\pmud_2024.2\\quanlysvbk\\quanlysvbk\\dbhelpers\\loginhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|solutionrelative:quanlysvbk\\dbhelpers\\loginhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|d:\\github\\pmud_2024.2\\quanlysvbk\\quanlysvbk\\danhmucgiangvien.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|solutionrelative:quanlysvbk\\danhmucgiangvien.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|d:\\github\\pmud_2024.2\\quanlysvbk\\quanlysvbk\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|solutionrelative:quanlysvbk\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|d:\\github\\pmud_2024.2\\quanlysvbk\\quanlysvbk\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|solutionrelative:quanlysvbk\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|d:\\github\\pmud_2024.2\\quanlysvbk\\quanlysvbk\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|solutionrelative:quanlysvbk\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|d:\\github\\pmud_2024.2\\quanlysvbk\\quanlysvbk\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|solutionrelative:quanlysvbk\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|d:\\github\\pmud_2024.2\\quanlysvbk\\quanlysvbk\\dbhelpers\\userhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88CEBF99-5C25-49B0-A787-58C306862290}|QuanLySVBK\\QuanLySVBK.csproj|solutionrelative:quanlysvbk\\dbhelpers\\userhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 256,
+      "VerticalTabListWidth": 156,
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\App.xaml.cs",
+              "RelativeDocumentMoniker": "QuanLySVBK\\App.xaml.cs",
+              "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\App.xaml.cs",
+              "RelativeToolTip": "QuanLySVBK\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAArwA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T03:56:58.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DanhMucGiangVien.xaml.cs",
+              "DocumentMoniker": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\DanhMucGiangVien.xaml.cs",
+              "RelativeDocumentMoniker": "QuanLySVBK\\DanhMucGiangVien.xaml.cs",
+              "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\DanhMucGiangVien.xaml.cs",
+              "RelativeToolTip": "QuanLySVBK\\DanhMucGiangVien.xaml.cs",
+              "ViewState": "AgIAANUAAAAAAAAAAAAAAMsAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T01:57:38.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DanhMucGiangVien.xaml",
+              "DocumentMoniker": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\DanhMucGiangVien.xaml",
+              "RelativeDocumentMoniker": "QuanLySVBK\\DanhMucGiangVien.xaml",
+              "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\DanhMucGiangVien.xaml",
+              "RelativeToolTip": "QuanLySVBK\\DanhMucGiangVien.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-15T02:16:33.203Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DanhMucSinhVien.xaml.cs",
+              "DocumentMoniker": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\DanhMucSinhVien.xaml.cs",
+              "RelativeDocumentMoniker": "QuanLySVBK\\DanhMucSinhVien.xaml.cs",
+              "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\DanhMucSinhVien.xaml.cs",
+              "RelativeToolTip": "QuanLySVBK\\DanhMucSinhVien.xaml.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAjwDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T16:56:32.037Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DanhMucSinhVien.xaml",
+              "DocumentMoniker": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\DanhMucSinhVien.xaml",
+              "RelativeDocumentMoniker": "QuanLySVBK\\DanhMucSinhVien.xaml",
+              "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\DanhMucSinhVien.xaml",
+              "RelativeToolTip": "QuanLySVBK\\DanhMucSinhVien.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-14T16:56:28.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DanhMucHocPhan.xaml",
+              "DocumentMoniker": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\DanhMucHocPhan.xaml",
+              "RelativeDocumentMoniker": "QuanLySVBK\\DanhMucHocPhan.xaml",
+              "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\DanhMucHocPhan.xaml",
+              "RelativeToolTip": "QuanLySVBK\\DanhMucHocPhan.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-14T16:56:15.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ListHelper.cs",
+              "DocumentMoniker": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\DBHelpers\\ListHelper.cs",
+              "RelativeDocumentMoniker": "QuanLySVBK\\DBHelpers\\ListHelper.cs",
+              "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\DBHelpers\\ListHelper.cs",
+              "RelativeToolTip": "QuanLySVBK\\DBHelpers\\ListHelper.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAgwDEAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T10:21:45.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "QuanLySVBK\\MainWindow.xaml",
+              "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\MainWindow.xaml",
+              "RelativeToolTip": "QuanLySVBK\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-14T09:06:36.573Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "QuanLySVBK\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\MainWindow.xaml.cs",
+              "RelativeToolTip": "QuanLySVBK\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAkwFMAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T06:27:14.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginHelper.cs",
+              "DocumentMoniker": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\DBHelpers\\LoginHelper.cs",
+              "RelativeDocumentMoniker": "QuanLySVBK\\DBHelpers\\LoginHelper.cs",
+              "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\DBHelpers\\LoginHelper.cs",
+              "RelativeToolTip": "QuanLySVBK\\DBHelpers\\LoginHelper.cs",
+              "ViewState": "AgIAABsAAAAAZmZmZmYSwAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T03:22:28.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserHelper.cs",
+              "DocumentMoniker": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\DBHelpers\\UserHelper.cs",
+              "RelativeDocumentMoniker": "QuanLySVBK\\DBHelpers\\UserHelper.cs",
+              "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\DBHelpers\\UserHelper.cs",
+              "RelativeToolTip": "QuanLySVBK\\DBHelpers\\UserHelper.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwBYAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T02:58:18.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoginWindow.xaml.cs",
+              "DocumentMoniker": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\LoginWindow.xaml.cs",
+              "RelativeDocumentMoniker": "QuanLySVBK\\LoginWindow.xaml.cs",
+              "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\LoginWindow.xaml.cs",
+              "RelativeToolTip": "QuanLySVBK\\LoginWindow.xaml.cs",
+              "ViewState": "AgIAAEcAAACAZmZmZmYWwFEAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:36:45.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "LoginWindow.xaml",
-              "DocumentMoniker": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\QuanLySVBK\\LoginWindow.xaml",
+              "DocumentMoniker": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\LoginWindow.xaml",
               "RelativeDocumentMoniker": "QuanLySVBK\\LoginWindow.xaml",
-              "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\LoginDemo\\QuanLySVBK\\LoginWindow.xaml",
+              "ToolTip": "D:\\GITHUB\\PMUD_2024.2\\QuanLySVBK\\QuanLySVBK\\LoginWindow.xaml",
               "RelativeToolTip": "QuanLySVBK\\LoginWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-12T12:27:18.373Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T12:27:18.373Z"
             }
           ]
         }

@@ -30,23 +30,23 @@
 
                 <!-- Row 0 -->
                 <TextBlock Text="MSSV:" Grid.Column="0" VerticalAlignment="Center" FontSize="13" Margin="0,0,5,0"/>
-                <TextBox x:Name="txtMSSV" Grid.Column="1" VerticalAlignment="Center" FontSize="13" Margin="0,5,20,5"/>
+                <TextBox x:Name="TxtMSSV" Grid.Column="1" VerticalAlignment="Center" FontSize="13" Margin="0,5,20,5"/>
 
                 <TextBlock Text="Mã học phần:" Grid.Column="2" VerticalAlignment="Center" FontSize="13" Margin="10,0,5,0"/>
-                <TextBox x:Name="txtMaHocPhan" Grid.Column="3" VerticalAlignment="Center" FontSize="13" Margin="0,5,20,5"/>
+                <TextBox x:Name="TxtMaHocPhan" Grid.Column="3" VerticalAlignment="Center" FontSize="13" Margin="0,5,20,5"/>
 
                 <TextBlock Text="Điểm GK:" Grid.Column="4" VerticalAlignment="Center" FontSize="13" Margin="10,0,5,0"/>
-                <TextBox x:Name="txtDiemGK" Grid.Column="5" VerticalAlignment="Center" FontSize="13" Margin="0,5,0,5"/>
+                <TextBox x:Name="TxtDiemGK" Grid.Column="5" VerticalAlignment="Center" FontSize="13" Margin="0,5,0,5"/>
 
                 <!-- Row 1 -->
                 <TextBlock Text="Kì học:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" FontSize="13" Margin="0,0,5,0"/>
-                <ComboBox x:Name="cboKiHoc" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" FontSize="13" Margin="0,0,20,0"/>
+                <ComboBox x:Name="CboKiHoc" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" FontSize="13" Margin="0,0,20,0"/>
 
                 <TextBlock Text="Mã lớp học phần:" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" FontSize="13" Margin="10,0,5,0"/>
-                <TextBox x:Name="txtMaLopHocPhan" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" FontSize="13" Margin="0,0,20,0"/>
+                <TextBox x:Name="TxtMaLopHocPhan" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" FontSize="13" Margin="0,0,20,0"/>
 
                 <TextBlock Text="Điểm CK:" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" FontSize="13" Margin="10,0,5,0"/>
-                <TextBox x:Name="txtDiemCK" Grid.Row="1" Grid.Column="5" VerticalAlignment="Center" FontSize="13"/>
+                <TextBox x:Name="TxtDiemCK" Grid.Row="1" Grid.Column="5" VerticalAlignment="Center" FontSize="13"/>
             </Grid>
 
             <!-- Data + Buttons -->
@@ -70,16 +70,16 @@
                 <!-- Buttons Panel -->
                 <Border Grid.Column="1" Background="#FFF0F0F0" BorderBrush="#FFCCCCCC" BorderThickness="1,0,0,0" CornerRadius="0 10 10 0">
                     <StackPanel VerticalAlignment="Center" Margin="10" HorizontalAlignment="Stretch">
-                        <Button x:Name="btnTimKiem" Content="TÌM KIẾM 🔍" Margin="0,0,0,15" Padding="10,5" HorizontalAlignment="Stretch"
+                        <Button x:Name="BtnTimKiem" Content="TÌM KIẾM 🔍" Margin="0,0,0,15" Padding="10,5" HorizontalAlignment="Stretch"
                                 Background="#5DADE2" Foreground="White" FontWeight="SemiBold"/>
                         
-                        <Button x:Name="btnThem" Content="THÊM ➕" Margin="0,0,0,15" Padding="10,5" HorizontalAlignment="Stretch"
+                        <Button x:Name="BtnThem" Content="THÊM ➕" Margin="0,0,0,15" Padding="10,5" HorizontalAlignment="Stretch"
                                 Background="#2ECC71" Foreground="White" FontWeight="SemiBold"/>
                         
-                        <Button x:Name="btnXoa" Content="XÓA ❌" Margin="0,0,0,15" Padding="10,5" HorizontalAlignment="Stretch"
+                        <Button x:Name="BtnXoa" Content="XÓA ❌" Margin="0,0,0,15" Padding="10,5" HorizontalAlignment="Stretch"
                                 Background="#E74C3C" Foreground="White" FontWeight="SemiBold"/>
                         
-                        <Button x:Name="btnCapNhat" Content="CẬP NHẬT 🔄" Padding="10,5" HorizontalAlignment="Stretch"
+                        <Button x:Name="BtnCapNhat" Content="CẬP NHẬT 🔄" Padding="10,5" HorizontalAlignment="Stretch"
                                 Background="#9B59B6" Foreground="White" FontWeight="SemiBold"/>
                     </StackPanel>
                 </Border>

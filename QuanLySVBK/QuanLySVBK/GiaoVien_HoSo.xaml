@@ -87,34 +87,34 @@
 
             <!-- Các trường thông tin -->
             <TextBlock Grid.Row="1" Grid.Column="0" Text="Họ tên:" Style="{StaticResource HeaderTextStyle}"/>
-            <TextBox Grid.Row="1" Grid.Column="1" x:Name="txtHoTen" Style="{StaticResource ReadOnlyTextBoxStyle}"/>
+            <TextBox Grid.Row="1" Grid.Column="1" x:Name="TxtHoTen" Style="{StaticResource ReadOnlyTextBoxStyle}"/>
 
             <TextBlock Grid.Row="2" Grid.Column="0" Text="Ngày sinh:" Style="{StaticResource HeaderTextStyle}"/>
-            <TextBox Grid.Row="2" Grid.Column="1" x:Name="txtNgaySinh" Style="{StaticResource ReadOnlyTextBoxStyle}"/>
+            <TextBox Grid.Row="2" Grid.Column="1" x:Name="TxtNgaySinh" Style="{StaticResource ReadOnlyTextBoxStyle}"/>
 
             <TextBlock Grid.Row="3" Grid.Column="0" Text="Giới tính:" Style="{StaticResource HeaderTextStyle}"/>
-            <TextBox Grid.Row="3" Grid.Column="1" x:Name="txtGioiTinh" Style="{StaticResource ReadOnlyTextBoxStyle}"/>
+            <TextBox Grid.Row="3" Grid.Column="1" x:Name="TxtGioiTinh" Style="{StaticResource ReadOnlyTextBoxStyle}"/>
 
             <TextBlock Grid.Row="4" Grid.Column="0" Text="Quê quán:" Style="{StaticResource HeaderTextStyle}"/>
-            <TextBox Grid.Row="4" Grid.Column="1" x:Name="txtQueQuan" Style="{StaticResource ReadOnlyTextBoxStyle}"/>
+            <TextBox Grid.Row="4" Grid.Column="1" x:Name="TxtQueQuan" Style="{StaticResource ReadOnlyTextBoxStyle}"/>
 
             <TextBlock Grid.Row="5" Grid.Column="0" Text="Viện:" Style="{StaticResource HeaderTextStyle}"/>
-            <TextBox Grid.Row="5" Grid.Column="1" x:Name="txtVien" Style="{StaticResource ReadOnlyTextBoxStyle}" TextWrapping="Wrap"/>
+            <TextBox Grid.Row="5" Grid.Column="1" x:Name="TxtVien" Style="{StaticResource ReadOnlyTextBoxStyle}" TextWrapping="Wrap"/>
 
             <TextBlock Grid.Row="6" Grid.Column="0" Text="Email:" Style="{StaticResource HeaderTextStyle}"/>
-            <TextBox Grid.Row="6" Grid.Column="1" x:Name="txtEmail" Style="{StaticResource ReadOnlyTextBoxStyle}"/>
+            <TextBox Grid.Row="6" Grid.Column="1" x:Name="TxtEmail" Style="{StaticResource ReadOnlyTextBoxStyle}"/>
 
             <TextBlock Grid.Row="7" Grid.Column="0" Text="Số điện thoại:" Style="{StaticResource HeaderTextStyle}"/>
-            <TextBox Grid.Row="7" Grid.Column="1" x:Name="txtSoDienThoai" Style="{StaticResource ReadOnlyTextBoxStyle}"/>
+            <TextBox Grid.Row="7" Grid.Column="1" x:Name="TxtSoDienThoai" Style="{StaticResource ReadOnlyTextBoxStyle}"/>
 
             <TextBlock Grid.Row="8" Grid.Column="0" Text="CCCD:" Style="{StaticResource HeaderTextStyle}"/>
-            <TextBox Grid.Row="8" Grid.Column="1" x:Name="txtCCCD" Style="{StaticResource ReadOnlyTextBoxStyle}"/>
+            <TextBox Grid.Row="8" Grid.Column="1" x:Name="TxtCCCD" Style="{StaticResource ReadOnlyTextBoxStyle}"/>
 
             <!-- Nút điều khiển -->
             <StackPanel Grid.Row="10" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
-                <Button x:Name="btnHuy" Content="Hủy" Width="90" Style="{StaticResource PrimaryButtonStyle}" Margin="0,0,10,0" Visibility="Collapsed"/>
-                <Button x:Name="btnLuu" Content="Lưu" Width="90" Style="{StaticResource PrimaryButtonStyle}" Background="#4CAF50" BorderBrush="#388E3C" Visibility="Collapsed"/>
-                <Button x:Name="btnChinhSua" Content="Chỉnh sửa" Width="100" Style="{StaticResource PrimaryButtonStyle}"/>
+                <Button x:Name="BtnHuy" Content="Hủy" Width="90" Style="{StaticResource PrimaryButtonStyle}" Margin="0,0,10,0" Visibility="Collapsed"/>
+                <Button x:Name="BtnLuu" Content="Lưu" Width="90" Style="{StaticResource PrimaryButtonStyle}" Background="#4CAF50" BorderBrush="#388E3C" Visibility="Collapsed"/>
+                <Button x:Name="BtnChinhSua" Content="Chỉnh sửa" Width="100" Style="{StaticResource PrimaryButtonStyle}"/>
             </StackPanel>
         </Grid>
     </Border>

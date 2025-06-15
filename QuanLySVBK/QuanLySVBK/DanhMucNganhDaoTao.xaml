@@ -25,22 +25,22 @@
                         <!-- Dòng 1: Mã viện -->
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
                             <TextBlock Text="Mã Viện:" Width="120" VerticalAlignment="Center" FontSize="13"/>
-                            <ComboBox x:Name="cboMaVien" Width="300" VerticalAlignment="Center"/>
+                            <ComboBox x:Name="CboMaVien" Width="300" VerticalAlignment="Center"/>
                         </StackPanel>
 
                         <!-- Dòng 2: Tên ngành -->
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
                             <TextBlock Text="Tên ngành:" Width="120" VerticalAlignment="Center" FontSize="13"/>
-                            <TextBox x:Name="txtTenNganh" Width="300" VerticalAlignment="Center"/>
+                            <TextBox x:Name="TxtTenNganh" Width="300" VerticalAlignment="Center"/>
                         </StackPanel>
 
                         <!-- Dòng 3: Mã ngành + Checkbox -->
                         <StackPanel Orientation="Horizontal">
                             <StackPanel Orientation="Horizontal" Width="300">
                                 <TextBlock Text="Mã ngành:" Width="120" VerticalAlignment="Center" FontSize="13"/>
-                                <TextBox x:Name="txtMaNganh" Width="150" VerticalAlignment="Center"/>
+                                <TextBox x:Name="TxtMaNganh" Width="150" VerticalAlignment="Center"/>
                             </StackPanel>
-                            <CheckBox x:Name="chkSuaMaNganh" Content="Sửa lại mã ngành" Margin="20,0,0,0" VerticalAlignment="Center"/>
+                            <CheckBox x:Name="ChkSuaMaNganh" Content="Sửa lại mã ngành" Margin="20,0,0,0" VerticalAlignment="Center"/>
                         </StackPanel>
                     </StackPanel>
                 </Expander>
@@ -59,19 +59,19 @@
             <!-- Panel nút chức năng -->
             <Border Grid.Column="1" Background="#FFF0F0F0" BorderBrush="#FFCCCCCC" BorderThickness="1,0,0,0" CornerRadius="0 10 10 0">
                 <StackPanel VerticalAlignment="Center" Margin="10" HorizontalAlignment="Stretch">
-                    <Button x:Name="btnTimKiem" Content="TÌM 🔍" Margin="0,0,0,12" Padding="10,5"
+                    <Button x:Name="BtnTimKiem" Content="TÌM 🔍" Margin="0,0,0,12" Padding="10,5"
                             Background="#5DADE2" Foreground="White" FontWeight="SemiBold"/>
 
-                    <Button x:Name="btnThemMoi" Content="THÊM ➕" Margin="0,0,0,12" Padding="10,5"
+                    <Button x:Name="BtnThemMoi" Content="THÊM ➕" Margin="0,0,0,12" Padding="10,5"
                             Background="#2ECC71" Foreground="White" FontWeight="SemiBold"/>
 
-                    <Button x:Name="btnXoa" Content="XÓA ❌" Margin="0,0,0,12" Padding="10,5"
+                    <Button x:Name="BtnXoa" Content="XÓA ❌" Margin="0,0,0,12" Padding="10,5"
                             Background="#E74C3C" Foreground="White" FontWeight="SemiBold"/>
 
-                    <Button x:Name="btnCapNhat" Content="CẬP NHẬT 🔄" Margin="0,0,0,12" Padding="10,5"
+                    <Button x:Name="BtnCapNhat" Content="CẬP NHẬT 🔄" Margin="0,0,0,12" Padding="10,5"
                             Background="#9B59B6" Foreground="White" FontWeight="SemiBold"/>
 
-                    <Button x:Name="btnInDS" Content="IN 🖨️" Padding="10,5"
+                    <Button x:Name="BtnInDS" Content="IN 🖨️" Padding="10,5"
                             Background="#F39C12" Foreground="White" FontWeight="SemiBold"/>
                 </StackPanel>
             </Border>

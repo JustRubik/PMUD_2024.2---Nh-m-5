@@ -20,45 +20,45 @@ namespace QuanLySVBK
         private void LoadDataFromDatabase()
         {
             // Giả lập dữ liệu từ CSDL
-            txtHoTen.Text = "Trương Hồ Phương Nga";
-            txtNgaySinh.Text = "9/12/1982";
-            txtGioiTinh.Text = "Nữ";
-            txtQueQuan.Text = "Cần Thơ";
-            txtVien.Text = "Viện Công nghệ Sinh học và Công nghệ Thực phẩm";
-            txtEmail.Text = "DucPhongDang@sis.hust.edu.vn";
-            txtSoDienThoai.Text = "00397643191";
-            txtCCCD.Text = "01082946685";
+            TxtHoTen.Text = "Trương Hồ Phương Nga";
+            TxtNgaySinh.Text = "9/12/1982";
+            TxtGioiTinh.Text = "Nữ";
+            TxtQueQuan.Text = "Cần Thơ";
+            TxtVien.Text = "Viện Công nghệ Sinh học và Công nghệ Thực phẩm";
+            TxtEmail.Text = "DucPhongDang@sis.hust.edu.vn";
+            TxtSoDienThoai.Text = "00397643191";
+            TxtCCCD.Text = "01082946685";
         }
 
         private void ToggleEditMode(bool isEditMode)
         {
             // Chuyển đổi giữa chế độ xem và chỉnh sửa
-            txtHoTen.Style = isEditMode ? (Style)Resources["EditableTextBoxStyle"] : (Style)Resources["ReadOnlyTextBoxStyle"];
-            txtNgaySinh.Style = isEditMode ? (Style)Resources["EditableTextBoxStyle"] : (Style)Resources["ReadOnlyTextBoxStyle"];
-            txtGioiTinh.Style = isEditMode ? (Style)Resources["EditableTextBoxStyle"] : (Style)Resources["ReadOnlyTextBoxStyle"];
-            txtQueQuan.Style = isEditMode ? (Style)Resources["EditableTextBoxStyle"] : (Style)Resources["ReadOnlyTextBoxStyle"];
-            txtVien.Style = isEditMode ? (Style)Resources["EditableTextBoxStyle"] : (Style)Resources["ReadOnlyTextBoxStyle"];
-            txtEmail.Style = isEditMode ? (Style)Resources["EditableTextBoxStyle"] : (Style)Resources["ReadOnlyTextBoxStyle"];
-            txtSoDienThoai.Style = isEditMode ? (Style)Resources["EditableTextBoxStyle"] : (Style)Resources["ReadOnlyTextBoxStyle"];
-            txtCCCD.Style = isEditMode ? (Style)Resources["EditableTextBoxStyle"] : (Style)Resources["ReadOnlyTextBoxStyle"];
+            TxtHoTen.Style = isEditMode ? (Style)Resources["EditableTextBoxStyle"] : (Style)Resources["ReadOnlyTextBoxStyle"];
+            TxtNgaySinh.Style = isEditMode ? (Style)Resources["EditableTextBoxStyle"] : (Style)Resources["ReadOnlyTextBoxStyle"];
+            TxtGioiTinh.Style = isEditMode ? (Style)Resources["EditableTextBoxStyle"] : (Style)Resources["ReadOnlyTextBoxStyle"];
+            TxtQueQuan.Style = isEditMode ? (Style)Resources["EditableTextBoxStyle"] : (Style)Resources["ReadOnlyTextBoxStyle"];
+            TxtVien.Style = isEditMode ? (Style)Resources["EditableTextBoxStyle"] : (Style)Resources["ReadOnlyTextBoxStyle"];
+            TxtEmail.Style = isEditMode ? (Style)Resources["EditableTextBoxStyle"] : (Style)Resources["ReadOnlyTextBoxStyle"];
+            TxtSoDienThoai.Style = isEditMode ? (Style)Resources["EditableTextBoxStyle"] : (Style)Resources["ReadOnlyTextBoxStyle"];
+            TxtCCCD.Style = isEditMode ? (Style)Resources["EditableTextBoxStyle"] : (Style)Resources["ReadOnlyTextBoxStyle"];
 
-            btnChinhSua.Visibility = isEditMode ? Visibility.Collapsed : Visibility.Visible;
-            btnHuy.Visibility = isEditMode ? Visibility.Visible : Visibility.Collapsed;
-            btnLuu.Visibility = isEditMode ? Visibility.Visible : Visibility.Collapsed;
+            BtnChinhSua.Visibility = isEditMode ? Visibility.Collapsed : Visibility.Visible;
+            BtnHuy.Visibility = isEditMode ? Visibility.Visible : Visibility.Collapsed;
+            BtnLuu.Visibility = isEditMode ? Visibility.Visible : Visibility.Collapsed;
         }
 
-        private void btnChinhSua_Click(object sender, RoutedEventArgs e)
+        private void BtnChinhSua_Click(object sender, RoutedEventArgs e)
         {
             ToggleEditMode(true);
         }
 
-        private void btnHuy_Click(object sender, RoutedEventArgs e)
+        private void BtnHuy_Click(object sender, RoutedEventArgs e)
         {
             ToggleEditMode(false);
             LoadDataFromDatabase(); // Khôi phục dữ liệu gốc
         }
 
-        private void btnLuu_Click(object sender, RoutedEventArgs e)
+        private void BtnLuu_Click(object sender, RoutedEventArgs e)
         {
             // Lưu dữ liệu vào CSDL
             try
