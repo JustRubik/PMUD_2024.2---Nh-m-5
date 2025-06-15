@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="QuanLySVBK.Accounts.DoiMatKhauControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:QuanLySVBK"
+             Height="300" Width="400">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+            <TextBlock Text="Mật khẩu hiện tại:"/>
+            <PasswordBox x:Name="TxtMatKhauCu" Margin="0,5,0,10"/>
+
+            <TextBlock Text="Mật khẩu mới:"/>
+            <PasswordBox x:Name="TxtMatKhauMoi" Margin="0,5,0,10"/>
+
+            <TextBlock Text="Nhập lại mật khẩu mới:"/>
+            <PasswordBox x:Name="TxtNhapLaiMatKhauMoi" Margin="0,5,0,20"/>
+
+            <Button Content="Đổi mật khẩu" Click="BtnDoiMatKhau_Click" Height="35" Background="#F02A2A" Foreground="White"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,7 +1,5 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
+﻿using System.Windows;
+using QuanLySVBK.Accounts;
 using QuanLySVBK.DBHelpers;
 
 namespace QuanLySVBK
@@ -13,6 +11,7 @@ namespace QuanLySVBK
         private readonly string _username;
         private readonly string _role;
         private readonly string _id;
+        private string? _name;
 
         public MainWindow(string username, string id, string role, LoginWindow loginWindow)
         {
@@ -25,8 +24,9 @@ namespace QuanLySVBK
             Title = "Đang tải thông tin...";
             Task.Run(() =>
             {
-                string name = UserHelper.GetFullName(username, id, role);
+                string? name = UserHelper.GetFullName(username, id, role);
                 Dispatcher.Invoke(() => Title = $"Xin chào {name}");
+                _name = name;
             });
         }
 
@@ -38,6 +38,26 @@ namespace QuanLySVBK
         private void Account_Click(object sender, RoutedEventArgs e)
         {
             SubMenuPopup_Account.IsOpen = !SubMenuPopup_Account.IsOpen;
+        }
+
+        private void AccountButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (_role == "student")
+            {
+                TaiKhoanSinhVien taiKhoanSinhVien = new(_name, _id);
+                MainContentControl.Content = taiKhoanSinhVien;
+            }
+            else if (_role == "lecturer")
+            {
+                TaiKhoanGiangVien taiKhoanGiangVien = new(_name, _id);
+                MainContentControl.Content = taiKhoanGiangVien;
+            }
+            else return;
+        }
+
+        private void SettingButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void HandleGPA_Click(object sender, RoutedEventArgs e)
@@ -94,7 +114,7 @@ namespace QuanLySVBK
 
         private void DanhMucNganhDaoTao_Click(object sender, RoutedEventArgs e)
         {
-            MainContentControl.Content = new DanhMucNganhDaoTao();
+            MainContentControl.Content = new DanhMucNganhDaoTao(_role);
         }
 
         private void DanhMucLopHocPhan_Click(object sender, RoutedEventArgs e)
@@ -130,5 +150,6 @@ namespace QuanLySVBK
                     e.Cancel = true;
             }
         }
+
     }
 }

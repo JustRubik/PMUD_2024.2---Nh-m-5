@@ -57,6 +57,7 @@ namespace QuanLySVBK
                     return;
                 }
 
+                MessageBox.Show("Tìm thấy sinh viên");
                 while (reader.Read())
                 {
                     DiemModel diem = new()
@@ -87,7 +88,6 @@ namespace QuanLySVBK
             string strDiemGK = TxtDiemGK.Text.Trim();
             string strDiemCK = TxtDiemCK.Text.Trim();
 
-            // Kiểm tra dữ liệu đầu vào
             if (string.IsNullOrWhiteSpace(mssv) ||
                 string.IsNullOrWhiteSpace(maHP) ||
                 string.IsNullOrWhiteSpace(maLop) ||
@@ -110,42 +110,54 @@ namespace QuanLySVBK
                 using SqlConnection conn = new(App_Config.connectionString);
                 conn.Open();
 
-                // Kiểm tra sự tồn tại của các khóa ngoại
-                if (!IsExists(conn, "sinhvien", "MaSV", mssv))
+                if (!IsExists(conn, "sinhvien", "MaSV", mssv) ||
+                    !IsExists(conn, "hocphan", "MaHP", maHP) ||
+                    !IsExists(conn, "lophocphan", "MaLop", maLop))
                 {
-                    MessageBox.Show("Mã sinh viên không tồn tại.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("Một trong các mã (SV, HP, Lớp) không tồn tại.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Warning);
                     return;
                 }
 
-                if (!IsExists(conn, "hocphan", "MaHP", maHP))
+                // Kiểm tra tồn tại bản ghi trùng cả 4 khóa chính
+                string fullDupQuery = @"
+            SELECT COUNT(*) FROM diem 
+            WHERE MaSV = @MaSV AND MaHP = @MaHP AND MaKi = @MaKi AND MaLop = @MaLop";
+
+                using SqlCommand fullDupCmd = new(fullDupQuery, conn);
+                fullDupCmd.Parameters.AddWithValue("@MaSV", mssv);
+                fullDupCmd.Parameters.AddWithValue("@MaHP", maHP);
+                fullDupCmd.Parameters.AddWithValue("@MaKi", kiHoc);
+                fullDupCmd.Parameters.AddWithValue("@MaLop", maLop);
+
+                int fullDup = (int)fullDupCmd.ExecuteScalar();
+
+                if (fullDup > 0)
                 {
-                    MessageBox.Show("Mã học phần không tồn tại.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("Dữ liệu đã tồn tại cho sinh viên, học phần, kỳ học và lớp học phần này.", "Trùng dữ liệu", MessageBoxButton.OK, MessageBoxImage.Warning);
                     return;
                 }
 
-                if (!IsExists(conn, "lophocphan", "MaLop", maLop))
-                {
-                    MessageBox.Show("Mã lớp học phần không tồn tại.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    return;
-                }
+                // Kiểm tra tồn tại bản ghi trùng MaSV, MaHP, MaKi (cập nhật)
+                string partialQuery = @"
+            SELECT COUNT(*) FROM diem 
+            WHERE MaSV = @MaSV AND MaHP = @MaHP AND MaKi = @MaKi";
 
-                // Kiểm tra điểm đã tồn tại chưa
-                string checkQuery = "SELECT COUNT(*) FROM diem WHERE MaSV = @MaSV AND MaHP = @MaHP AND MaKi = @MaKi";
-                using SqlCommand checkCmd = new(checkQuery, conn);
-                checkCmd.Parameters.AddWithValue("@MaSV", mssv);
-                checkCmd.Parameters.AddWithValue("@MaHP", maHP);
-                checkCmd.Parameters.AddWithValue("@MaKi", kiHoc);
-                int exists = (int)checkCmd.ExecuteScalar();
+                using SqlCommand partialCmd = new(partialQuery, conn);
+                partialCmd.Parameters.AddWithValue("@MaSV", mssv);
+                partialCmd.Parameters.AddWithValue("@MaHP", maHP);
+                partialCmd.Parameters.AddWithValue("@MaKi", kiHoc);
 
-                if (exists > 0)
+                int partialExists = (int)partialCmd.ExecuteScalar();
+
+                if (partialExists > 0)
                 {
-                    // Cập nhật
+                    // Cập nhật điểm và mã lớp mới
                     string updateQuery = @"
-                        UPDATE diem
-                        SET DiemGiuaKi = @DiemGK,
-                            DiemCuoiKi = @DiemCK,
-                            MaLop = @MaLop
-                        WHERE MaSV = @MaSV AND MaHP = @MaHP AND MaKi = @MaKi";
+                UPDATE diem
+                SET DiemGiuaKi = @DiemGK,
+                    DiemCuoiKi = @DiemCK,
+                    MaLop = @MaLop
+                WHERE MaSV = @MaSV AND MaHP = @MaHP AND MaKi = @MaKi";
 
                     using SqlCommand updateCmd = new(updateQuery, conn);
                     updateCmd.Parameters.AddWithValue("@DiemGK", diemGK);
@@ -154,16 +166,16 @@ namespace QuanLySVBK
                     updateCmd.Parameters.AddWithValue("@MaSV", mssv);
                     updateCmd.Parameters.AddWithValue("@MaHP", maHP);
                     updateCmd.Parameters.AddWithValue("@MaKi", kiHoc);
-                    updateCmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Cập nhật điểm thành công.", "Thành công", MessageBoxButton.OK, MessageBoxImage.Information);
+                    updateCmd.ExecuteNonQuery();
+                    MessageBox.Show("Cập nhật điểm thành công (với lớp học phần mới).", "Thành công", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {
-                    // Thêm mới
+                    // Thêm mới bản ghi
                     string insertQuery = @"
-                        INSERT INTO diem (MaSV, MaHP, MaKi, MaLop, DiemGiuaKi, DiemCuoiKi)
-                        VALUES (@MaSV, @MaHP, @MaKi, @MaLop, @DiemGK, @DiemCK)";
+                INSERT INTO diem (MaSV, MaHP, MaKi, MaLop, DiemGiuaKi, DiemCuoiKi)
+                VALUES (@MaSV, @MaHP, @MaKi, @MaLop, @DiemGK, @DiemCK)";
 
                     using SqlCommand insertCmd = new(insertQuery, conn);
                     insertCmd.Parameters.AddWithValue("@MaSV", mssv);
@@ -172,21 +184,18 @@ namespace QuanLySVBK
                     insertCmd.Parameters.AddWithValue("@MaLop", maLop);
                     insertCmd.Parameters.AddWithValue("@DiemGK", diemGK);
                     insertCmd.Parameters.AddWithValue("@DiemCK", diemCK);
-                    insertCmd.ExecuteNonQuery();
 
+                    insertCmd.ExecuteNonQuery();
                     MessageBox.Show("Thêm điểm mới thành công.", "Thành công", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
 
-                BtnTimKiem_Click(null!, null!);
+                BtnTimKiem_Click(null!, null!); // Làm mới danh sách
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi khi xử lý dữ liệu: " + ex.Message, "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
-
-
 
         private void BtnXoa_Click(object sender, RoutedEventArgs e)
         {

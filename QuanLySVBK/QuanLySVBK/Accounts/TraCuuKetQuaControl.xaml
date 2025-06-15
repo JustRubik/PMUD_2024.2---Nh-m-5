@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="QuanLySVBK.Accounts.TraCuuKetQuaControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignHeight="400" d:DesignWidth="800">
+    <Grid Margin="10">
+        <Border Background="White" CornerRadius="10" BorderBrush="#F02A2A" BorderThickness="2" Padding="10">
+            <StackPanel>
+                <TextBlock Text="KẾT QUẢ HỌC TẬP" FontSize="28" FontWeight="Bold" Foreground="#F02A2A" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                <DataGrid x:Name="dgKetQua"
+                          AutoGenerateColumns="False"
+                          CanUserAddRows="False"
+                          IsReadOnly="True"
+                          HeadersVisibility="Column"
+                          FontSize="14"
+                          Height="300">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Mã HP" Binding="{Binding MaHP}" Width="*" />
+                        <DataGridTextColumn Header="Tên học phần" Binding="{Binding TenHP}" Width="2*" />
+                        <DataGridTextColumn Header="Số TC" Binding="{Binding SoTinChi}" Width="*" />
+                        <DataGridTextColumn Header="Lớp" Binding="{Binding MaLop}" Width="*" />
+                        <DataGridTextColumn Header="Kỳ" Binding="{Binding MaKi}" Width="*" />
+                        <DataGridTextColumn Header="Giữa kỳ" Binding="{Binding DiemGiuaKi}" Width="*" />
+                        <DataGridTextColumn Header="Cuối kỳ" Binding="{Binding DiemCuoiKi}" Width="*" />
+                        <DataGridTextColumn Header="Tổng kết" Binding="{Binding DiemTongKet}" Width="*" />
+                        <DataGridTextColumn Header="Điểm chữ" Binding="{Binding DiemChu}" Width="*" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

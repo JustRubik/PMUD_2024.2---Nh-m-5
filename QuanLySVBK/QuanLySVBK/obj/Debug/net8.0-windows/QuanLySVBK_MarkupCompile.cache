@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 D:\GITHUB\PMUD_2024.2\QuanLySVBK\QuanLySVBK\App.xaml
-22-1717380553
+30800781817
 7-1291343633
-31-1014130239
+39-911160384
 224698626285
-CapNhatDiem.xaml;DanhMucGiangVien.xaml;DanhMucHocPhan.xaml;DanhMucKhoaVien.xaml;DanhMucLopHocPhan.xaml;DanhMucNganhDaoTao.xaml;DanhMucSinhVien.xaml;ForgotPasswordWindow.xaml;GiaoVien_DoiMatKhau.xaml;GiaoVien_HoSo.xaml;GiaoVien_NhapDiem.xaml;GiaoVien_XemThongTin.xaml;HelpWindow.xaml;LoginWindow.xaml;MainWindow.xaml;SinhVien_DoiMatKhau.xaml;SinhVien_ThongTinSinhVien.xaml;SinhVien_TraCuuKetQuaHocTap.xaml;SinhVien_TraCuuMonHoc.xaml;XuLyCPA.xaml;XuLyDiemTongKet.xaml;XuLyGPA.xaml;
+Accounts\DanhSachLopDayControl.xaml;Accounts\DoiMatKhauControl.xaml;Accounts\TaiKhoanGiangVien.xaml;Accounts\TaiKhoanSinhVien.xaml;Accounts\ThongTinGiangVienControl.xaml;Accounts\ThongTinSinhVienControl.xaml;Accounts\TraCuuKetQuaControl.xaml;Accounts\TraCuuMonHocControl.xaml;CapNhatDiem.xaml;DanhMucGiangVien.xaml;DanhMucHocPhan.xaml;DanhMucKhoaVien.xaml;DanhMucLopHocPhan.xaml;DanhMucNganhDaoTao.xaml;DanhMucSinhVien.xaml;ForgotPasswordWindow.xaml;GiaoVien_DoiMatKhau.xaml;GiaoVien_HoSo.xaml;GiaoVien_NhapDiem.xaml;GiaoVien_XemThongTin.xaml;HelpWindow.xaml;LoginWindow.xaml;MainWindow.xaml;SinhVien_DoiMatKhau.xaml;SinhVien_ThongTinSinhVien.xaml;SinhVien_TraCuuKetQuaHocTap.xaml;SinhVien_TraCuuMonHoc.xaml;XuLyCPA.xaml;XuLyDiemTongKet.xaml;XuLyGPA.xaml;
 
 False
 

@@ -92,7 +92,7 @@ namespace QuanLySVBK {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/QuanLySVBK;component/xulygpa.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/QuanLySVBK;V1.0.0.0;component/xulygpa.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\XuLyGPA.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

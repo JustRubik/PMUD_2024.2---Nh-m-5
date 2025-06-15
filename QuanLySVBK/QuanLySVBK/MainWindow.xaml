@@ -132,8 +132,8 @@
                        PopupAnimation="Fade">
                     <Border Background="White" CornerRadius="5" Padding="10">
                         <StackPanel>
-                            <Button Content="Tài khoản" Style="{StaticResource PopupButtonStyle}"/>
-                            <Button Content="Cài đặt" Style="{StaticResource PopupButtonStyle}"/>
+                            <Button Content="Tài khoản" Click="AccountButton_Click" Style="{StaticResource PopupButtonStyle}"/>
+                            <Button Content="Cài đặt" Click="SettingButton_Click" Style="{StaticResource PopupButtonStyle}"/>
                             <Button Content="Đăng xuất" Click="LogOut_Click" Style="{StaticResource PopupButtonStyle}"/>
                         </StackPanel>
                     </Border>

@@ -5,7 +5,6 @@ namespace QuanLySVBK.DBHelpers
 {
     public static class UserHelper
     {
-        private static readonly string connectionString = "Server=admin-pc\\sqlexpress;Database=QuanLyDiemSVBK;Trusted_Connection=True;TrustServerCertificate=True;";
 
         public static string GetFullName(string username, string id, string role)
         {
@@ -30,7 +29,7 @@ namespace QuanLySVBK.DBHelpers
 
             try
             {
-                using SqlConnection conn = new(connectionString);
+                using SqlConnection conn = new(App_Config.connectionString);
                 conn.Open();
                 using SqlCommand cmd = new(query, conn);
                 cmd.Parameters.AddWithValue("@username", username);

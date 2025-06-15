@@ -209,6 +209,11 @@ ALTER TABLE capgiayto
 ADD CONSTRAINT FK_capgiayto_sinhvien
 FOREIGN KEY (MaSV) REFERENCES sinhvien(MaSV);
 
+ALTER TABLE sinhvien
+ADD GPA FLOAT NOT NULL DEFAULT 0,
+    CPA FLOAT NOT NULL DEFAULT 0;
+
+
 
 --DELETE FROM [sinhvien];--
 

@@ -61,6 +61,7 @@ namespace QuanLySVBK
             }
 
             DanhSachKetQua.Clear();
+            double? cpa = null;
 
             try
             {
@@ -99,7 +100,7 @@ namespace QuanLySVBK
 
                 if (tongTinChi > 0)
                 {
-                    double cpa = tongDiemXTinChi / tongTinChi;
+                    cpa = tongDiemXTinChi / tongTinChi;
                     ChkCPA.Text = $"*CPA tính đến kì này: {cpa:F2}";
                 }
                 else
@@ -110,8 +111,30 @@ namespace QuanLySVBK
             catch (Exception ex)
             {
                 MessageBox.Show($"Lỗi khi xử lý CPA: {ex.Message}");
+                return;
+            }
+
+            // Cập nhật CPA nếu có
+            if (cpa.HasValue)
+            {
+                try
+                {
+                    using SqlConnection conn2 = new(App_Config.connectionString);
+                    conn2.Open();
+
+                    string updateQuery = "UPDATE sinhvien SET CPA = @CPA WHERE MaSV = @MaSV";
+                    using SqlCommand updateCmd = new(updateQuery, conn2);
+                    updateCmd.Parameters.AddWithValue("@CPA", cpa.Value);
+                    updateCmd.Parameters.AddWithValue("@MaSV", maSV);
+                    updateCmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi khi cập nhật CPA vào cơ sở dữ liệu: {ex.Message}");
+                }
             }
         }
+
 
 
         private void BtnInDanhSach_Click(object sender, RoutedEventArgs e)

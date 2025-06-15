@@ -1,7 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup />
+  <PropertyGroup>
+    <_LastSelectedProfileId>D:\GITHUB\PMUD_2024.2\QuanLySVBK\QuanLySVBK\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
   <ItemGroup>
+    <Compile Update="Accounts\TaiKhoanSinhVien.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Accounts\TaiKhoanGiangVien.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Accounts\DoiMatKhauControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Accounts\ThongTinSinhVienControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Accounts\ThongTinGiangVienControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Accounts\TraCuuKetQuaControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Accounts\TraCuuMonHocControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Accounts\DanhSachLopDayControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="CapNhatDiem.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

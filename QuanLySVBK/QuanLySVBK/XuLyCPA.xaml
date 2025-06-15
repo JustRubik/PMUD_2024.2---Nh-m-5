@@ -42,7 +42,7 @@
                 <!-- Kết quả (DataGrid) -->
                 <DataGrid Grid.Row="1" x:Name="dgKetQua" AutoGenerateColumns="False">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Mã sinh viên" Binding="{Binding MaSinhVien}" Width="auto"/>
+                        <DataGridTextColumn Header="Mã sinh viên" Binding="{Binding MaSV}" Width="auto"/>
                         <DataGridTextColumn Header="Mã môn học" Binding="{Binding MaMonHoc}" Width="*"/>
                         <DataGridTextColumn Header="Mã lớp" Binding="{Binding MaLop}" Width="auto"/>
                         <DataGridTextColumn Header="Mã kì" Binding="{Binding MaKi}" Width="*"/>
