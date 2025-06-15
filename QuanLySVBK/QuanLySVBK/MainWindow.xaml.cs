@@ -42,7 +42,7 @@ namespace QuanLySVBK
 
         private void HandleGPA_Click(object sender, RoutedEventArgs e)
         {
-            if (_role == "student")
+            if (_role == "student" || _role == "lecturer")
                 MessageBox.Show("Bạn không có quyền truy cập");
             else
                 MainContentControl.Content = new XuLyGPA();
@@ -50,7 +50,7 @@ namespace QuanLySVBK
 
         private void HandleCPA_Click(object sender, RoutedEventArgs e)
         {
-            if (_role == "student")
+            if (_role == "student" || _role == "lecturer")
                 MessageBox.Show("Bạn không có quyền truy cập");
             else
                 MainContentControl.Content = new XuLyCPA();
@@ -58,7 +58,7 @@ namespace QuanLySVBK
 
         private void HandleFinalGrade_Click(object sender, RoutedEventArgs e)
         {
-            if (_role == "student")
+            if (_role == "student" || _role == "lecturer")
                 MessageBox.Show("Bạn không có quyền truy cập");
             else
                 MainContentControl.Content = new XuLyDiemTongKet();
@@ -66,7 +66,10 @@ namespace QuanLySVBK
 
         private void UpdateScoreMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            MainContentControl.Content = new CapNhatDiem();
+            if (_role == "student")
+                MessageBox.Show("Bạn không có quyền truy cập");
+            else
+                MainContentControl.Content = new CapNhatDiem();
         }
 
         private void Help_Click(object sender, RoutedEventArgs e)
@@ -86,7 +89,7 @@ namespace QuanLySVBK
 
         private void DanhMucHocPhan_Click(object sender, RoutedEventArgs e)
         {
-            MainContentControl.Content = new DanhMucHocPhan();
+            MainContentControl.Content = new DanhMucHocPhan(_role);
         }
 
         private void DanhMucNganhDaoTao_Click(object sender, RoutedEventArgs e)
@@ -96,12 +99,12 @@ namespace QuanLySVBK
 
         private void DanhMucLopHocPhan_Click(object sender, RoutedEventArgs e)
         {
-            MainContentControl.Content = new DanhMucLopHocPhan();
+            MainContentControl.Content = new DanhMucLopHocPhan(_role);
         }
 
         private void DanhMucKhoaVien_Click(object sender, RoutedEventArgs e)
         {
-            MainContentControl.Content = new DanhMucKhoaVien();
+            MainContentControl.Content = new DanhMucKhoaVien(_role);
         }
 
         private void LogOut_Click(object sender, RoutedEventArgs e)

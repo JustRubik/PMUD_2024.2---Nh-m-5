@@ -36,18 +36,18 @@
                             <TextBlock x:Name="ChkCPA" Text="*CPA tính đến kì này" Margin="10,0,0,0" VerticalAlignment="Center" Foreground="Red"/>
                         </StackPanel>
 
-                        <!-- Nút hiển thị các môn -->
-                        <CheckBox Content="Hiển thị các môn trong kì" Width="200" HorizontalAlignment="Left" Margin="120,0,0,10" FontSize="13" VerticalAlignment="Center"/>
-                    </StackPanel>
+                     </StackPanel>
                 </Expander>
 
                 <!-- Kết quả (DataGrid) -->
                 <DataGrid Grid.Row="1" x:Name="dgKetQua" AutoGenerateColumns="False">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Mã môn học" Binding="{Binding MaMonHoc}" Width="120"/>
-                        <DataGridTextColumn Header="Tên môn học" Binding="{Binding TenMonHoc}" Width="*"/>
-                        <DataGridTextColumn Header="Số tín chỉ" Binding="{Binding SoTinChi}" Width="80"/>
-                        <DataGridTextColumn Header="Điểm" Binding="{Binding Diem}" Width="80"/>
+                        <DataGridTextColumn Header="Mã sinh viên" Binding="{Binding MaSinhVien}" Width="auto"/>
+                        <DataGridTextColumn Header="Mã môn học" Binding="{Binding MaMonHoc}" Width="*"/>
+                        <DataGridTextColumn Header="Mã lớp" Binding="{Binding MaLop}" Width="auto"/>
+                        <DataGridTextColumn Header="Mã kì" Binding="{Binding MaKi}" Width="*"/>
+                        <DataGridTextColumn Header="Số tín chỉ" Binding="{Binding SoTinChi}" Width="Auto"/>
+                        <DataGridTextColumn Header="Điểm" Binding="{Binding Diem}" Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>
@@ -56,7 +56,7 @@
             <Border Grid.Column="1" Width="150" Background="#FFF0F0F0" BorderBrush="#FFCCCCCC" BorderThickness="1,0,0,0" CornerRadius="10">
                 <StackPanel VerticalAlignment="Center" Margin="10" HorizontalAlignment="Stretch">
                     <!-- Nút XỬ LÝ với emoji bánh răng -->
-                    <Button x:Name="BtnXuLy" Margin="0,0,0,15" Background="#2E86C1" Foreground="White" Padding="10,5" HorizontalAlignment="Stretch">
+                    <Button x:Name="BtnXuLy" Margin="0,0,0,15" Background="#2E86C1" Foreground="White" Padding="10,5" HorizontalAlignment="Stretch" Click="BtnXuLy_Click">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                             <TextBlock Text="⚙️" FontSize="14" Margin="0,0,5,0"/>
                             <TextBlock Text="XỬ LÝ" FontWeight="SemiBold"/>
@@ -64,7 +64,7 @@
                     </Button>
 
                     <!-- Nút IN DANH SÁCH với emoji máy in -->
-                    <Button x:Name="BtnInDanhSach" Padding="10,5" HorizontalAlignment="Stretch">
+                    <Button x:Name="BtnInDanhSach" Padding="10,5" HorizontalAlignment="Stretch" Click="BtnInDanhSach_Click">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                             <TextBlock Text="🖨️" FontSize="14" Margin="0,0,5,0"/>
                             <TextBlock Text="IN DANH SÁCH" FontWeight="SemiBold"/>

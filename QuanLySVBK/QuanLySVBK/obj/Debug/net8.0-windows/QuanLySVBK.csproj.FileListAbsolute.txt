@@ -238,3 +238,14 @@ D:\GITHUB\PMUD_2024.2\QuanLySVBK\QuanLySVBK\obj\Debug\net8.0-windows\QuanLySVBK.
 D:\GITHUB\PMUD_2024.2\QuanLySVBK\QuanLySVBK\obj\Debug\net8.0-windows\QuanLySVBK.csproj.Up2Date
 D:\GITHUB\PMUD_2024.2\QuanLySVBK\QuanLySVBK\obj\Debug\net8.0-windows\QuanLySVBK.genruntimeconfig.cache
 D:\GITHUB\PMUD_2024.2\QuanLySVBK\QuanLySVBK\obj\Debug\net8.0-windows\ref\QuanLySVBK.dll
+D:\GITHUB\PMUD_2024.2\QuanLySVBK\QuanLySVBK\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+D:\GITHUB\PMUD_2024.2\QuanLySVBK\QuanLySVBK\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\GITHUB\PMUD_2024.2\QuanLySVBK\QuanLySVBK\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\GITHUB\PMUD_2024.2\QuanLySVBK\QuanLySVBK\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
+D:\GITHUB\PMUD_2024.2\QuanLySVBK\QuanLySVBK\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\GITHUB\PMUD_2024.2\QuanLySVBK\QuanLySVBK\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+D:\GITHUB\PMUD_2024.2\QuanLySVBK\QuanLySVBK\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\GITHUB\PMUD_2024.2\QuanLySVBK\QuanLySVBK\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+D:\GITHUB\PMUD_2024.2\QuanLySVBK\QuanLySVBK\bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll
+D:\GITHUB\PMUD_2024.2\QuanLySVBK\QuanLySVBK\bin\Debug\net8.0-windows\System.Text.Json.dll
+D:\GITHUB\PMUD_2024.2\QuanLySVBK\QuanLySVBK\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll

@@ -1,6 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
 using QuanLySVBK.DBHelpers;
-using System;
 using System.Collections.ObjectModel;
 using System.Data;
 using System.Windows;
@@ -14,7 +13,6 @@ namespace QuanLySVBK
     {
         private readonly string _role;
 
-        private const string connectionString = "Server=admin-pc\\sqlexpress;Database=QuanLyDiemSVBK;Trusted_Connection=True;TrustServerCertificate=True;";
         public ObservableCollection<GiangVien> DanhSachGiangVien { get; set; } = [];
 
         public DanhMucGiangVien(string role)
@@ -36,7 +34,7 @@ namespace QuanLySVBK
             DanhSachGiangVien.Clear();
             try
             {
-                using SqlConnection conn = new(connectionString);
+                using SqlConnection conn = new(App_Config.connectionString);
                 conn.Open();
                 using SqlCommand cmd = new(ListHelper.GetAllGiangVien, conn);
                 using SqlDataReader reader = cmd.ExecuteReader();
@@ -65,7 +63,7 @@ namespace QuanLySVBK
 
         private bool ThongTinGiangVienHopLe(out string? errorMsg)
         {
-            if (!ValidationHelper.KiemTraTrong(TxtMaGiangVien.Text, "Mã giảng viên không được để trống.", out errorMsg) ||
+            if (!ValidationHelper.KiemTraTrong(TxtGiangVien.Text, "Mã giảng viên không được để trống.", out errorMsg) ||
                 !ValidationHelper.KiemTraTrong(TxtHoTen.Text, "Họ tên không được để trống.", out errorMsg) ||
                 (RbNam.IsChecked == false && RbNu.IsChecked == false && (errorMsg = "Vui lòng chọn giới tính.") != null) ||
                 (DpNgaySinh.SelectedDate == null && (errorMsg = "Ngày sinh không được để trống.") != null) ||
@@ -95,7 +93,7 @@ namespace QuanLySVBK
 
             GiangVien gv = new()
             {
-                MaGV = TxtMaGiangVien.Text,
+                MaGV = TxtGiangVien.Text,
                 HoTen = TxtHoTen.Text,
                 GioiTinh = RbNam.IsChecked == true ? "Nam" : "Nữ",
                 NgaySinh = DpNgaySinh.SelectedDate,
@@ -107,7 +105,7 @@ namespace QuanLySVBK
 
             try
             {
-                using SqlConnection conn = new(connectionString);
+                using SqlConnection conn = new(App_Config.connectionString);
                 conn.Open();
                 using SqlCommand cmd = new(ListHelper.InsertGiangVien, conn);
                 cmd.Parameters.AddWithValue("@MaGV", gv.MaGV);
@@ -142,7 +140,7 @@ namespace QuanLySVBK
             {
                 try
                 {
-                    using SqlConnection conn = new(connectionString);
+                    using SqlConnection conn = new(App_Config.connectionString);
                     conn.Open();
                     using SqlCommand cmd = new(ListHelper.DeleteGiangVienByMaGV, conn);
                     cmd.Parameters.AddWithValue("@MaGV", gv.MaGV);
@@ -166,7 +164,7 @@ namespace QuanLySVBK
         {
             try
             {
-                using SqlConnection conn = new(connectionString);
+                using SqlConnection conn = new(App_Config.connectionString);
                 conn.Open();
 
                 string query = ListHelper.GetUpsertGiangVienQuery();
@@ -203,42 +201,57 @@ namespace QuanLySVBK
 
         private void BtnTimKiem_Click(object sender, RoutedEventArgs e)
         {
-            string keyword = TxtHoTen.Text.Trim().ToLower();
+            string maGV = TxtGiangVien.Text.Trim().ToLower();
+            string hoTen = TxtHoTen.Text.Trim().ToLower();
+            string gioiTinh = RbNam.IsChecked == true ? "nam" :
+                              RbNu.IsChecked == true ? "nữ" : "";
+            string queQuan = CboQueQuan.Text.Trim().ToLower();
+            string cccd = TxtCCCD.Text.Trim().ToLower();
+            string soDienThoai = TxtSoDienThoai.Text.Trim().ToLower();
+            string maVien = TxtMaVien.Text.Trim().ToLower();
 
-            if (string.IsNullOrWhiteSpace(keyword))
+            if (string.IsNullOrWhiteSpace(maGV) &&
+                string.IsNullOrWhiteSpace(hoTen) &&
+                string.IsNullOrWhiteSpace(gioiTinh) &&
+                string.IsNullOrWhiteSpace(queQuan) &&
+                string.IsNullOrWhiteSpace(cccd) &&
+                string.IsNullOrWhiteSpace(soDienThoai) &&
+                string.IsNullOrWhiteSpace(maVien))
             {
-                MessageBox.Show("Vui lòng nhập từ khóa tìm kiếm.\nHọ tên, mã giảng viên, mã viện.");
+                MessageBox.Show("Vui lòng nhập ít nhất một từ khóa để tìm kiếm.");
                 return;
             }
 
-            DanhSachGiangVien.Clear(); // Xóa danh sách cũ trước khi tìm kiếm mới
+            DanhSachGiangVien.Clear();
 
             try
             {
-                using SqlConnection conn = new(connectionString);
+                using SqlConnection conn = new(App_Config.connectionString);
                 conn.Open();
 
-                // Truy vấn SQL tìm kiếm theo Mã GV, Họ tên hoặc Mã viện
-                string query = SearchGiangVienByHoTen;
-
-                using SqlCommand cmd = new(query, conn);
-                cmd.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
+                using SqlCommand cmd = new(SearchGiangVienByKeyWord(), conn);
+                cmd.Parameters.AddWithValue("@MaGV", string.IsNullOrWhiteSpace(maGV) ? DBNull.Value : $"%{maGV}%");
+                cmd.Parameters.AddWithValue("@HoTen", string.IsNullOrWhiteSpace(hoTen) ? DBNull.Value : $"%{hoTen}%");
+                cmd.Parameters.AddWithValue("@GioiTinh", string.IsNullOrWhiteSpace(gioiTinh) ? DBNull.Value : $"%{gioiTinh}%");
+                cmd.Parameters.AddWithValue("@QueQuan", string.IsNullOrWhiteSpace(queQuan) ? DBNull.Value : $"%{queQuan}%");
+                cmd.Parameters.AddWithValue("@CCCD", string.IsNullOrWhiteSpace(cccd) ? DBNull.Value : $"%{cccd}%");
+                cmd.Parameters.AddWithValue("@SoDT", string.IsNullOrWhiteSpace(soDienThoai) ? DBNull.Value : $"%{soDienThoai}%");
+                cmd.Parameters.AddWithValue("@MaVien", string.IsNullOrWhiteSpace(maVien) ? DBNull.Value : $"%{maVien}%");
 
                 using SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    GiangVien gv = new()
+                    DanhSachGiangVien.Add(new GiangVien
                     {
-                        MaGV = reader["MaGV"].ToString(),
-                        HoTen = reader["HoTen"].ToString(),
-                        GioiTinh = reader["GioiTinh"].ToString(),
+                        MaGV = reader["MaGV"]?.ToString(),
+                        HoTen = reader["HoTen"]?.ToString(),
+                        GioiTinh = reader["GioiTinh"]?.ToString(),
                         NgaySinh = reader["NgaySinh"] == DBNull.Value ? null : reader.GetDateTime(reader.GetOrdinal("NgaySinh")),
                         QueQuan = reader["QueQuan"]?.ToString(),
                         CanCuocCongDan = reader["CanCuocCongDan"]?.ToString(),
                         SoDienThoai = reader["SoDienThoai"]?.ToString(),
                         MaVien = reader["MaVien"]?.ToString()
-                    };
-                    DanhSachGiangVien.Add(gv);
+                    });
                 }
 
                 if (DanhSachGiangVien.Count == 0)
@@ -248,9 +261,10 @@ namespace QuanLySVBK
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi tìm kiếm: " + ex.Message);
+                MessageBox.Show("Lỗi khi tìm kiếm: " + ex.Message);
             }
         }
+
 
 
 

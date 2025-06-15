@@ -51,7 +51,7 @@
                         <!-- Dòng 3: Mã giảng viên -->
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
                             <TextBlock Text="Mã GV:" Width="100" VerticalAlignment="Center" FontSize="13"/>
-                            <TextBox x:Name="TxtMaGiangVien" Width="200" VerticalAlignment="Center"/>
+                            <TextBox x:Name="TxtGiangVien" Width="200" VerticalAlignment="Center"/>
                         </StackPanel>
 
                         <!-- Dòng 4: Quê quán -->

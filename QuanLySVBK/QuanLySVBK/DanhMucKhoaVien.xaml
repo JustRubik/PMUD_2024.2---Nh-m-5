@@ -58,10 +58,12 @@
                 <!-- DataGrid danh sách khoa/viện -->
                 <DataGrid Grid.Row="1" x:Name="dgKhoaVien" AutoGenerateColumns="False" Margin="0,10,0,0">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Mã Viện" Binding="{Binding MaVien}" Width="100"/>
+                        <DataGridTextColumn Header="Mã Viện" Binding="{Binding MaVien}" Width="auto"/>
                         <DataGridTextColumn Header="Tên Viện" Binding="{Binding TenVien}" Width="*"/>
-                        <DataGridTextColumn Header="Viện trưởng" Binding="{Binding VienTruong}" Width="200"/>
-                        <DataGridTextColumn Header="Website" Binding="{Binding Website}" Width="150"/>
+                        <DataGridTextColumn Header="Viện trưởng" Binding="{Binding VienTruong}" Width="auto"/>
+                        <DataGridTextColumn Header="Website" Binding="{Binding Website}" Width="*"/>
+                        <DataGridTextColumn Header="Địa chỉ văn phòng" Binding="{Binding DiaChiVanPhong}" Width="*"/>
+
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>
@@ -70,19 +72,24 @@
             <Border Grid.Column="1" Background="#FFF0F0F0" BorderBrush="#FFCCCCCC" BorderThickness="1,0,0,0" CornerRadius="0 10 10 0">
                 <StackPanel VerticalAlignment="Center" Margin="10" HorizontalAlignment="Stretch">
                     <Button x:Name="BtnTimKiem" Content="TÌM 🔍" Margin="0,0,0,12" Padding="10,5"
-                            Background="#5DADE2" Foreground="White" FontWeight="SemiBold"/>
+                            Background="#5DADE2" Foreground="White" FontWeight="SemiBold"
+                            Click="BtnTimKiem_Click"/>
 
                     <Button x:Name="BtnThemMoi" Content="THÊM ➕" Margin="0,0,0,12" Padding="10,5"
-                            Background="#2ECC71" Foreground="White" FontWeight="SemiBold"/>
+                            Background="#2ECC71" Foreground="White" FontWeight="SemiBold"
+                            Click="BtnThemMoi_Click"/>
 
                     <Button x:Name="BtnXoa" Content="XÓA ❌" Margin="0,0,0,12" Padding="10,5"
-                            Background="#E74C3C" Foreground="White" FontWeight="SemiBold"/>
+                            Background="#E74C3C" Foreground="White" FontWeight="SemiBold"
+                            Click="BtnXoa_Click"/>
 
                     <Button x:Name="BtnCapNhat" Content="CẬP NHẬT 🔄" Margin="0,0,0,12" Padding="10,5"
-                            Background="#9B59B6" Foreground="White" FontWeight="SemiBold"/>
+                            Background="#9B59B6" Foreground="White" FontWeight="SemiBold"
+                            Click="BtnCapNhat_Click"/>
 
                     <Button x:Name="BtnInDS" Content="IN 🖨️" Padding="10,5"
-                            Background="#F39C12" Foreground="White" FontWeight="SemiBold"/>
+                            Background="#F39C12" Foreground="White" FontWeight="SemiBold"
+                            Click="BtnInDS_Click"/>
                 </StackPanel>
             </Border>
         </Grid>

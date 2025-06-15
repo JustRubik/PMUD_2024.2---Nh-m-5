@@ -108,7 +108,7 @@ namespace QuanLySVBK {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/QuanLySVBK;V1.0.0.0;component/giaovien_xemthongtin.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/QuanLySVBK;component/giaovien_xemthongtin.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\GiaoVien_XemThongTin.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

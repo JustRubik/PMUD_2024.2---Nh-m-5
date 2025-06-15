@@ -12,14 +12,14 @@ EXEC sp_executesql @sql;
 CREATE DATABASE QuanLyDiemSVBK
 ON
 (	NAME = 'qldsvbk_datasinhvien',
-	FILENAME = 'D:\GITHUB\PMUD_2024.2\LoginDemo\qldsvbk_datasinhvien.mdf',
+	FILENAME = 'D:\GITHUB\PMUD_2024.2\QuanLySVBK\QuanLySVBK\App_Data\qldsvbk_datasinhvien.mdf',
 	SIZE =100MB,
 	MAXSIZE = 1000MB,
 	FILEGROWTH = 50MB)
 LOG ON
 (	
 NAME = 'qldsvbk_log',
-	FILENAME = 'D:\GITHUB\PMUD_2024.2\LoginDemo\qldsvbk_datasinhvien.ldf',
+	FILENAME = 'D:\GITHUB\PMUD_2024.2\QuanLySVBK\QuanLySVBK\App_Data\qldsvbk_datasinhvien.ldf',
 	SIZE =100MB,
 	MAXSIZE = 1000MB,
 	FILEGROWTH = 50MB)
@@ -29,7 +29,8 @@ USE QuanLyDiemSVBK;
 GO
 
 CREATE TABLE [Admin](
-	Username Varchar(50) primary key,
+	MaAD	Varchar(10) primary key,
+	Username Varchar(50) NULL,
 	Password Varchar(25) NULL
 );
 
@@ -209,9 +210,9 @@ ADD CONSTRAINT FK_capgiayto_sinhvien
 FOREIGN KEY (MaSV) REFERENCES sinhvien(MaSV);
 
 
---DELETE FROM [sinhvien];
+--DELETE FROM [sinhvien];--
 
-INSERT INTO [dbo].[Admin] VALUES ('admin1','1234'),('admin2','5678');
+INSERT INTO [dbo].[Admin] VALUES ('001','admin1','1234'),('002','admin2','5678');
 GO
 
 INSERT INTO [dbo].[vien] VALUES 

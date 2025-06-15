@@ -30,7 +30,7 @@
                             <TextBox x:Name="TxtMaSinhVien" Width="200" Margin="0,0,30,0"/>
 
                             <TextBlock Text="Mã học phần:" Width="120" VerticalAlignment="Center" FontSize="13"/>
-                            <TextBox x:Name="TxtMaHocPhan" Width="200"/>
+                            <TextBox x:Name="TxtMaHP" Width="200"/>
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
@@ -54,10 +54,11 @@
                           Background="#FFF0F0F0" BorderBrush="#CCCCCC" BorderThickness="1"
                           Margin="0,5,0,0" VerticalAlignment="Stretch">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Mã môn học" Binding="{Binding MaMonHoc}" Width="120"/>
+                        <DataGridTextColumn Header="MSSV" Binding="{Binding MaSV}" Width="auto"/>
+                        <DataGridTextColumn Header="Mã môn học" Binding="{Binding MaMonHoc}" Width="*"/>
                         <DataGridTextColumn Header="Tên môn học" Binding="{Binding TenMonHoc}" Width="*"/>
-                        <DataGridTextColumn Header="Số tín chỉ" Binding="{Binding SoTinChi}" Width="80"/>
-                        <DataGridTextColumn Header="Điểm" Binding="{Binding Diem}" Width="80"/>
+                        <DataGridTextColumn Header="Số tín chỉ" Binding="{Binding SoTinChi}" Width="*"/>
+                        <DataGridTextColumn Header="Điểm" Binding="{Binding Diem}" Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>
@@ -67,7 +68,7 @@
                 <StackPanel VerticalAlignment="Center" Margin="10" HorizontalAlignment="Stretch">
                     <!-- Nút XỬ LÝ với emoji bánh răng -->
                     <Button x:Name="BtnXuLy" Margin="0,0,0,15" Background="#2E86C1" Foreground="White" 
-                            Padding="10,5" HorizontalAlignment="Stretch" Height="35">
+                            Padding="10,5" HorizontalAlignment="Stretch" Height="35" Click="BtnXuLy_Click">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                             <TextBlock Text="⚙️" FontSize="14" Margin="0,0,5,0"/>
                             <TextBlock Text="XỬ LÝ" FontWeight="SemiBold"/>
@@ -75,7 +76,7 @@
                     </Button>
 
                     <!-- Nút IN DANH SÁCH với emoji máy in -->
-                    <Button x:Name="BtnInDanhSach" Padding="10,5" HorizontalAlignment="Stretch" Height="35">
+                    <Button x:Name="BtnInDanhSach" Padding="10,5" HorizontalAlignment="Stretch" Height="35" Click="BtnInDanhSach_Click">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                             <TextBlock Text="🖨️" FontSize="14" Margin="0,0,5,0"/>
                             <TextBlock Text="IN DANH SÁCH" FontWeight="SemiBold"/>

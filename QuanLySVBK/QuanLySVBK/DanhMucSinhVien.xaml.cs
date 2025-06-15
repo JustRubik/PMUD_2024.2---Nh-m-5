@@ -13,8 +13,6 @@ namespace QuanLySVBK
     public partial class DanhMucSinhVien : UserControl
     {
         private readonly string _role;
-
-        private const string connectionString = "Server=admin-pc\\sqlexpress;Database=QuanLyDiemSVBK;Trusted_Connection=True;TrustServerCertificate=True;";
         public ObservableCollection<SinhVien> DanhSachSinhVien { get; set; } = [];
 
         public DanhMucSinhVien(string role)
@@ -35,7 +33,7 @@ namespace QuanLySVBK
             DanhSachSinhVien.Clear();
             try
             {
-                using SqlConnection conn = new(connectionString);
+                using SqlConnection conn = new(App_Config.connectionString);
                 conn.Open();
                 using SqlCommand cmd = new(ListHelper.GetAllSinhVien, conn);
                 using SqlDataReader reader = cmd.ExecuteReader();
@@ -102,7 +100,7 @@ namespace QuanLySVBK
 
             try
             {
-                using SqlConnection conn = new(connectionString);
+                using SqlConnection conn = new(App_Config.connectionString);
                 conn.Open();
                 using SqlCommand cmd = new(ListHelper.InsertSinhVien, conn);
                 cmd.Parameters.AddWithValue("@MaSV", sv.MaSV);
@@ -136,7 +134,7 @@ namespace QuanLySVBK
             {
                 try
                 {
-                    using SqlConnection conn = new(connectionString);
+                    using SqlConnection conn = new(App_Config.connectionString);
                     conn.Open();
                     using SqlCommand cmd = new(ListHelper.DeleteSinhVienByMaSV, conn);
                     cmd.Parameters.AddWithValue("@MaSV", sv.MaSV);
@@ -160,7 +158,7 @@ namespace QuanLySVBK
         {
             try
             {
-                using SqlConnection conn = new(connectionString);
+                using SqlConnection conn = new(App_Config.connectionString);
                 conn.Open();
 
                 string query = ListHelper.GetUpsertSinhVienQuery();
@@ -197,14 +195,25 @@ namespace QuanLySVBK
 
         private void BtnTimKiem_Click(object sender, RoutedEventArgs e)
         {
-            string keyword_HoTen = TxtHoTen.Text.Trim().ToLower();
-            string keyword_MaSV = TxtSinhVien.Text.Trim().ToLower();
-            string keyword_SoDT = TxtSoDienThoai.Text.Trim().ToLower();
-            string keyword_CCCD = TxtCCCD.Text.Trim().ToLower();
+            string maSV = TxtSinhVien.Text.Trim().ToLower();
+            string hoTen = TxtHoTen.Text.Trim().ToLower();
+            string gioiTinh = RbNam.IsChecked == true ? "nam" :
+                              RbNu.IsChecked == true ? "nữ" : "";
+            string queQuan = CboQueQuan.Text.Trim().ToLower();
+            string cccd = TxtCCCD.Text.Trim().ToLower();
+            string soDienThoai = TxtSoDienThoai.Text.Trim().ToLower();
+            string maNganh = TxtMaNganh.Text.Trim().ToLower();
 
-            if (string.IsNullOrWhiteSpace(keyword_HoTen) || string.IsNullOrWhiteSpace(keyword_MaSV) || string.IsNullOrWhiteSpace(keyword_SoDT) || string.IsNullOrWhiteSpace(keyword_SoDT))
+            // Nếu tất cả đều rỗng thì không tìm
+            if (string.IsNullOrWhiteSpace(maSV) &&
+                string.IsNullOrWhiteSpace(hoTen) &&
+                string.IsNullOrWhiteSpace(gioiTinh) &&
+                string.IsNullOrWhiteSpace(queQuan) &&
+                string.IsNullOrWhiteSpace(cccd) &&
+                string.IsNullOrWhiteSpace(soDienThoai) &&
+                string.IsNullOrWhiteSpace(maNganh))
             {
-                MessageBox.Show("Vui lòng nhập từ khóa tìm kiếm.\nHọ tên, mã sinh viên, mã ngành.");
+                MessageBox.Show("Vui lòng nhập ít nhất một từ khóa để tìm kiếm.");
                 return;
             }
 
@@ -212,44 +221,45 @@ namespace QuanLySVBK
 
             try
             {
-                using SqlConnection conn = new(connectionString);
+                using SqlConnection conn = new(App_Config.connectionString);
                 conn.Open();
 
-                string query = SearchSinhVienByHoTen;
-
-                using SqlCommand cmd = new(query, conn);
-                cmd.Parameters.AddWithValue("@keyword_HoTen", "%" + keyword_HoTen + "%");
-                cmd.Parameters.AddWithValue("@keyword_MaSV", "%" + keyword_MaSV + "%");
-                cmd.Parameters.AddWithValue("@keyword_SoDT", "%" + keyword_SoDT + "%");
-                cmd.Parameters.AddWithValue("@keyword_CCCD", "%" + keyword_HoTen + "%");
+                using SqlCommand cmd = new(SearchSinhVienByKeyWord(), conn);
+                cmd.Parameters.AddWithValue("@MaSV", string.IsNullOrWhiteSpace(maSV) ? DBNull.Value : $"%{maSV}%");
+                cmd.Parameters.AddWithValue("@HoTen", string.IsNullOrWhiteSpace(hoTen) ? DBNull.Value : $"%{hoTen}%");
+                cmd.Parameters.AddWithValue("@GioiTinh", string.IsNullOrWhiteSpace(gioiTinh) ? DBNull.Value : $"%{gioiTinh}%");
+                cmd.Parameters.AddWithValue("@QueQuan", string.IsNullOrWhiteSpace(queQuan) ? DBNull.Value : $"%{queQuan}%");
+                cmd.Parameters.AddWithValue("@CCCD", string.IsNullOrWhiteSpace(cccd) ? DBNull.Value : $"%{cccd}%");
+                cmd.Parameters.AddWithValue("@SoDT", string.IsNullOrWhiteSpace(soDienThoai) ? DBNull.Value : $"%{soDienThoai}%");
+                cmd.Parameters.AddWithValue("@MaNganh", string.IsNullOrWhiteSpace(maNganh) ? DBNull.Value : $"%{maNganh}%");
 
                 using SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    SinhVien sv = new()
+                    DanhSachSinhVien.Add(new SinhVien
                     {
-                        MaSV = reader["MaSV"].ToString(),
-                        HoTen = reader["HoTen"].ToString(),
-                        GioiTinh = reader["GioiTinh"].ToString(),
+                        MaSV = reader["MaSV"]?.ToString(),
+                        HoTen = reader["HoTen"]?.ToString(),
+                        GioiTinh = reader["GioiTinh"]?.ToString(),
                         NgaySinh = reader["NgaySinh"] == DBNull.Value ? null : reader.GetDateTime(reader.GetOrdinal("NgaySinh")),
                         QueQuan = reader["QueQuan"]?.ToString(),
                         CanCuocCongDan = reader["CanCuocCongDan"]?.ToString(),
                         SoDienThoai = reader["SoDienThoai"]?.ToString(),
                         MaNganh = reader["MaNganh"]?.ToString()
-                    };
-                    DanhSachSinhVien.Add(sv);
+                    });
                 }
 
                 if (DanhSachSinhVien.Count == 0)
                 {
-                    MessageBox.Show("Không tìm thấy sinh viên phù hợp.");
+                    MessageBox.Show("Không tìm thấy sinh viên nào phù hợp.");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi tìm kiếm: " + ex.Message);
+                MessageBox.Show("Lỗi khi tìm kiếm: " + ex.Message);
             }
         }
+
 
         private void BtnInDS_Click(object sender, RoutedEventArgs e)
         {

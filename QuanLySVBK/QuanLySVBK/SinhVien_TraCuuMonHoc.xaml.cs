@@ -22,8 +22,8 @@ namespace QuanLySVBK
         {
             // Tạo DataTable mẫu
             DataTable dt = new DataTable();
-            dt.Columns.Add("MaHocPhan");
-            dt.Columns.Add("TenHocPhan");
+            dt.Columns.Add("MaHP");
+            dt.Columns.Add("TenHP");
             dt.Columns.Add("SoTinChi");
             dt.Columns.Add("KhoaVien");
 

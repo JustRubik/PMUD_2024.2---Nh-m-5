@@ -1,11 +1,11 @@
 ﻿using Microsoft.Data.SqlClient;
+using System.Configuration;
 using System.Windows;
 
 namespace QuanLySVBK.DBHelpers
 {
     public static class LoginHelper
     {
-        private const string connectionString = "Server=admin-pc\\sqlexpress;Database=QuanLyDiemSVBK;Trusted_Connection=True;TrustServerCertificate=True;";
 
         // Trả về ID nếu đăng nhập đúng, ngược lại trả về null
         public static string? TryLogin(string usernameOrId, string password, string tableName)
@@ -32,7 +32,7 @@ namespace QuanLySVBK.DBHelpers
 
             try
             {
-                using SqlConnection conn = new(connectionString);
+                using SqlConnection conn = new(App_Config.connectionString);
                 using SqlCommand cmd = new(query, conn);
                 cmd.Parameters.AddWithValue("@user", usernameOrId);
                 conn.Open();

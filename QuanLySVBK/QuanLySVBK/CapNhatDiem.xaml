@@ -33,7 +33,7 @@
                 <TextBox x:Name="TxtMSSV" Grid.Column="1" VerticalAlignment="Center" FontSize="13" Margin="0,5,20,5"/>
 
                 <TextBlock Text="Mã học phần:" Grid.Column="2" VerticalAlignment="Center" FontSize="13" Margin="10,0,5,0"/>
-                <TextBox x:Name="TxtMaHocPhan" Grid.Column="3" VerticalAlignment="Center" FontSize="13" Margin="0,5,20,5"/>
+                <TextBox x:Name="TxtMaHP" Grid.Column="3" VerticalAlignment="Center" FontSize="13" Margin="0,5,20,5"/>
 
                 <TextBlock Text="Điểm GK:" Grid.Column="4" VerticalAlignment="Center" FontSize="13" Margin="10,0,5,0"/>
                 <TextBox x:Name="TxtDiemGK" Grid.Column="5" VerticalAlignment="Center" FontSize="13" Margin="0,5,0,5"/>
@@ -59,11 +59,11 @@
                 <!-- DataGrid -->
                 <DataGrid x:Name="dgKetQua" AutoGenerateColumns="False" Grid.Column="0">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Mã môn học" Binding="{Binding MaMonHoc}" Width="120"/>
-                        <DataGridTextColumn Header="Tên môn học" Binding="{Binding TenMonHoc}" Width="*"/>
-                        <DataGridTextColumn Header="Số tín chỉ" Binding="{Binding SoTinChi}" Width="80"/>
-                        <DataGridTextColumn Header="Điểm GK" Binding="{Binding DiemGK}" Width="80"/>
-                        <DataGridTextColumn Header="Điểm CK" Binding="{Binding DiemCK}" Width="80"/>
+                        <DataGridTextColumn Header="Mã môn học" Binding="{Binding MaMonHoc}" Width="auto"/>
+                        <DataGridTextColumn Header="Tên môn học" Binding="{Binding TenMonHoc}" Width="300"/>
+                        <DataGridTextColumn Header="Số tín chỉ" Binding="{Binding SoTinChi}" Width="*"/>
+                        <DataGridTextColumn Header="Điểm GK" Binding="{Binding DiemGK}" Width="*"/>
+                        <DataGridTextColumn Header="Điểm CK" Binding="{Binding DiemCK}" Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
 
@@ -71,16 +71,20 @@
                 <Border Grid.Column="1" Background="#FFF0F0F0" BorderBrush="#FFCCCCCC" BorderThickness="1,0,0,0" CornerRadius="0 10 10 0">
                     <StackPanel VerticalAlignment="Center" Margin="10" HorizontalAlignment="Stretch">
                         <Button x:Name="BtnTimKiem" Content="TÌM KIẾM 🔍" Margin="0,0,0,15" Padding="10,5" HorizontalAlignment="Stretch"
-                                Background="#5DADE2" Foreground="White" FontWeight="SemiBold"/>
+                                Background="#5DADE2" Foreground="White" FontWeight="SemiBold"
+                                Click="BtnTimKiem_Click"/>
                         
                         <Button x:Name="BtnThem" Content="THÊM ➕" Margin="0,0,0,15" Padding="10,5" HorizontalAlignment="Stretch"
-                                Background="#2ECC71" Foreground="White" FontWeight="SemiBold"/>
+                                Background="#2ECC71" Foreground="White" FontWeight="SemiBold"
+                                Click="BtnThem_Click"/>
                         
                         <Button x:Name="BtnXoa" Content="XÓA ❌" Margin="0,0,0,15" Padding="10,5" HorizontalAlignment="Stretch"
-                                Background="#E74C3C" Foreground="White" FontWeight="SemiBold"/>
+                                Background="#E74C3C" Foreground="White" FontWeight="SemiBold"
+                                Click="BtnXoa_Click"/>
                         
                         <Button x:Name="BtnCapNhat" Content="CẬP NHẬT 🔄" Padding="10,5" HorizontalAlignment="Stretch"
-                                Background="#9B59B6" Foreground="White" FontWeight="SemiBold"/>
+                                Background="#9B59B6" Foreground="White" FontWeight="SemiBold"
+                                Click="BtnCapNhat_Click"/>
                     </StackPanel>
                 </Border>
             </Grid>

@@ -109,8 +109,8 @@
                           BorderThickness="1"
                           ScrollViewer.VerticalScrollBarVisibility="Auto">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Mã học phần" Binding="{Binding MaHocPhan}" Width="*"/>
-                        <DataGridTextColumn Header="Tên học phần" Binding="{Binding TenHocPhan}" Width="2*"/>
+                        <DataGridTextColumn Header="Mã học phần" Binding="{Binding MaHP}" Width="*"/>
+                        <DataGridTextColumn Header="Tên học phần" Binding="{Binding TenHP}" Width="2*"/>
                         <DataGridTextColumn Header="Số tín chỉ" Binding="{Binding SoTinChi}" Width="Auto"/>
                         <DataGridTextColumn Header="Điểm hệ 10" Binding="{Binding DiemHe10}" Width="Auto"/>
                         <DataGridTextColumn Header="Điểm chữ" Binding="{Binding DiemChu}" Width="Auto"/>
