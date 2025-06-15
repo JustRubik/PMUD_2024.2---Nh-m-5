@@ -3,9 +3,9 @@
 Nhóm 5
 
 File này không có gì đâu, chỉ có giới thiệu nhóm và thành viên thôi:
-1. Đặng Huy Hiếu  20223771
-2. Lương Đức Minh 20224061
-3. Phạm Minh Hiếu  20213923
-4. Nguyễn Trọng Tiến  20224159
+1. Đặng Huy Hiếu  
+2. Lương Đức Minh 
+3. Phạm Minh Hiếu  
+4. Nguyễn Trọng Tiến  
 
 Cập nhật lần cuối: Hiện đã có file exe
